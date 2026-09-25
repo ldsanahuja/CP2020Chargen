@@ -1,0 +1,377 @@
+{
+  "$id": "1",
+  "$values": [
+    {
+      "$id": "2",
+      "Name": "Pants (Generic)",
+      "Type": 3,
+      "Price": 20
+    },
+    {
+      "$id": "3",
+      "Name": "Top (Generic)",
+      "Type": 3,
+      "Price": 15
+    },
+    {
+      "$id": "4",
+      "Name": "Jacket (Generic)",
+      "Type": 3,
+      "Price": 35
+    },
+    {
+      "$id": "5",
+      "Name": "Footwear (Generic)",
+      "Type": 3,
+      "Price": 25
+    },
+    {
+      "$id": "6",
+      "Name": "Jewelry (Generic)",
+      "Type": 3,
+      "Price": 50
+    },
+    {
+      "$id": "7",
+      "Name": "Mirrorshades (Generic)",
+      "Type": 3,
+      "Price": 25
+    },
+    {
+      "$id": "8",
+      "Name": "Contact Lenses (Generic)",
+      "Type": 3,
+      "Price": 100
+    },
+    {
+      "$id": "9",
+      "Name": "Glasses (Generic)",
+      "Type": 3,
+      "Price": 50
+    },
+    {
+      "$id": "10",
+      "Name": "Techscanner",
+      "Type": 4,
+      "Price": 600
+    },
+    {
+      "$id": "11",
+      "Name": "Cutting Torch",
+      "Type": 4,
+      "Price": 40
+    },
+    {
+      "$id": "12",
+      "Name": "Tech Toolkit",
+      "Type": 4,
+      "Price": 100
+    },
+    {
+      "$id": "13",
+      "Name": "B&E Tools",
+      "Type": 4,
+      "Price": 120
+    },
+    {
+      "$id": "14",
+      "Name": "Electronic Toolkit",
+      "Type": 4,
+      "Price": 100
+    },
+    {
+      "$id": "15",
+      "Name": "Protective Googles",
+      "Type": 4,
+      "Price": 20
+    },
+    {
+      "$id": "16",
+      "Name": "Flashtube",
+      "Type": 4,
+      "Price": 2
+    },
+    {
+      "$id": "17",
+      "Name": "Glowstick",
+      "Type": 4,
+      "Price": 1
+    },
+    {
+      "$id": "18",
+      "Name": "Paint, ltr",
+      "Type": 4,
+      "Price": 10
+    },
+    {
+      "$id": "19",
+      "Name": "Flash Tape, mtr",
+      "Type": 4,
+      "Price": 10
+    },
+    {
+      "$id": "20",
+      "Name": "Rope, mtr",
+      "Type": 4,
+      "Price": 2
+    },
+    {
+      "$id": "21",
+      "Name": "Breathing Mask",
+      "Type": 4,
+      "Price": 30
+    },
+    {
+      "$id": "22",
+      "Name": "Video Board, mtr2",
+      "Type": 5,
+      "Price": 100
+    },
+    {
+      "$id": "23",
+      "Name": "Data Chip",
+      "Type": 5,
+      "Price": 10
+    },
+    {
+      "$id": "24",
+      "Name": "Logcompass",
+      "Type": 5,
+      "Price": 50
+    },
+    {
+      "$id": "25",
+      "Name": "Digital Recorder",
+      "Type": 5,
+      "Price": 300
+    },
+    {
+      "$id": "26",
+      "Name": "Digital Camera",
+      "Type": 5,
+      "Price": 150
+    },
+    {
+      "$id": "27",
+      "Name": "VideoCam",
+      "Type": 5,
+      "Price": 800
+    },
+    {
+      "$id": "28",
+      "Name": "V/A Tape Player",
+      "Type": 5,
+      "Price": 40
+    },
+    {
+      "$id": "29",
+      "Name": "Videotape",
+      "Type": 5,
+      "Price": 4
+    },
+    {
+      "$id": "30",
+      "Name": "Pocket TV",
+      "Type": 5,
+      "Price": 80
+    },
+    {
+      "$id": "31",
+      "Name": "Digital Chip Player",
+      "Type": 5,
+      "Price": 150
+    },
+    {
+      "$id": "32",
+      "Name": "Digital Music Chip",
+      "Type": 5,
+      "Price": 20
+    },
+    {
+      "$id": "33",
+      "Name": "Electric Guitar",
+      "Type": 5,
+      "Price": 250
+    },
+    {
+      "$id": "34",
+      "Name": "Electric Keyboard",
+      "Type": 5,
+      "Price": 700
+    },
+    {
+      "$id": "35",
+      "Name": "Drum Synth",
+      "Type": 5,
+      "Price": 600
+    },
+    {
+      "$id": "36",
+      "Name": "Amplifier",
+      "Type": 5,
+      "Price": 750
+    },
+    {
+      "$id": "37",
+      "Name": "Ammo, Light Pistol/SMG (100)",
+      "Type": 0,
+      "Price": 15
+    },
+    {
+      "$id": "38",
+      "Name": "Ammo, Medium Pistol/SMG (50)",
+      "Type": 0,
+      "Price": 15
+    },
+    {
+      "$id": "39",
+      "Name": "Ammo, Heavy Pistol/SMG (50)",
+      "Type": 0,
+      "Price": 18
+    },
+    {
+      "$id": "40",
+      "Name": "Ammo, Very Heavy Pistol (50)",
+      "Type": 0,
+      "Price": 20
+    },
+    {
+      "$id": "41",
+      "Name": "Ammo, Assault Rifle (100)",
+      "Type": 0,
+      "Price": 40
+    },
+    {
+      "$id": "42",
+      "Name": "Ammo, Shotgun (12)",
+      "Type": 0,
+      "Price": 15
+    },
+    {
+      "$id": "43",
+      "Name": "Ammo, 20mm round (1)",
+      "Type": 0,
+      "Price": 25
+    },
+    {
+      "$id": "44",
+      "Name": "Ammo, Std. Arrows (12)",
+      "Type": 0,
+      "Price": 24
+    },
+    {
+      "$id": "45",
+      "Name": "Ammo, Std. Crossbow bolts (12)",
+      "Type": 0,
+      "Price": 30
+    },
+    {
+      "$id": "46",
+      "Name": "Ammo, Airgun pellets (100)",
+      "Type": 0,
+      "Price": 6
+    },
+    {
+      "$id": "47",
+      "Name": "Ammo, Needlegun rounds (50)",
+      "Type": 0,
+      "Price": 25
+    },
+    {
+      "$id": "48",
+      "Name": "Ammo, Flamethrower (1)",
+      "Type": 0,
+      "Price": 50
+    },
+    {
+      "$id": "49",
+      "Name": "Ammo, Std. Micro Missile (4)",
+      "Type": 0,
+      "Price": 100
+    },
+    {
+      "$id": "50",
+      "Name": "Ammo, AP Light Pistol/SMG (100)",
+      "Type": 0,
+      "Price": 45
+    },
+    {
+      "$id": "51",
+      "Name": "Ammo, Needlegun rounds, acid/drug (50)",
+      "Type": 0,
+      "Price": 125
+    },
+    {
+      "$id": "52",
+      "Name": "Silencer",
+      "Type": 1,
+      "Price": 100
+    },
+    {
+      "$id": "53",
+      "Name": "Holster, any",
+      "Type": 1,
+      "Price": 20
+    },
+    {
+      "$id": "54",
+      "Name": "Shoulder sling",
+      "Type": 1,
+      "Price": 5
+    },
+    {
+      "$id": "55",
+      "Name": "Pistol Laser Pointer (+1WA)",
+      "Type": 1,
+      "Price": 100
+    },
+    {
+      "$id": "56",
+      "Head": 0,
+      "Torso": 4,
+      "Arms": 4,
+      "Legs": 0,
+      "EV": 0,
+      "IsHard": false,
+      "Name": "Heavy Leather Jacket",
+      "Type": 2,
+      "Price": 50
+    },
+    {
+      "$id": "57",
+      "Head": 0,
+      "Torso": 0,
+      "Arms": 0,
+      "Legs": 4,
+      "EV": 0,
+      "IsHard": false,
+      "Name": "Heavy Leather Pants",
+      "Type": 2,
+      "Price": 50
+    },
+    {
+      "$id": "58",
+      "Head": 0,
+      "Torso": 10,
+      "Arms": 0,
+      "Legs": 0,
+      "EV": 0,
+      "IsHard": false,
+      "Name": "Kevlar Vest",
+      "Type": 2,
+      "Price": 90
+    },
+    {
+      "$id": "59",
+      "Head": 25,
+      "Torso": 25,
+      "Arms": 25,
+      "Legs": 25,
+      "EV": 2,
+      "IsHard": true,
+      "Name": "Corp Militar Body Armor",
+      "Type": 2,
+      "Price": 600
+    }
+  ]
+}
