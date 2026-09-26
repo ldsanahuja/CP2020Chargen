@@ -1,332 +1,388 @@
 {
   "$id": "1",
+  "$type": "System.Collections.Generic.List`1[[CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
   "$values": [
     {
       "$id": "2",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Pants (Generic)",
       "Type": 3,
       "Price": 20
     },
     {
       "$id": "3",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Top (Generic)",
       "Type": 3,
       "Price": 15
     },
     {
       "$id": "4",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Jacket (Generic)",
       "Type": 3,
       "Price": 35
     },
     {
       "$id": "5",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Footwear (Generic)",
       "Type": 3,
       "Price": 25
     },
     {
       "$id": "6",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Jewelry (Generic)",
       "Type": 3,
       "Price": 50
     },
     {
       "$id": "7",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Mirrorshades (Generic)",
       "Type": 3,
       "Price": 25
     },
     {
       "$id": "8",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Contact Lenses (Generic)",
       "Type": 3,
       "Price": 100
     },
     {
       "$id": "9",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Glasses (Generic)",
       "Type": 3,
       "Price": 50
     },
     {
       "$id": "10",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Techscanner",
       "Type": 4,
       "Price": 600
     },
     {
       "$id": "11",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Cutting Torch",
       "Type": 4,
       "Price": 40
     },
     {
       "$id": "12",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Tech Toolkit",
       "Type": 4,
       "Price": 100
     },
     {
       "$id": "13",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "B&E Tools",
       "Type": 4,
       "Price": 120
     },
     {
       "$id": "14",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Electronic Toolkit",
       "Type": 4,
       "Price": 100
     },
     {
       "$id": "15",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Protective Googles",
       "Type": 4,
       "Price": 20
     },
     {
       "$id": "16",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Flashtube",
       "Type": 4,
       "Price": 2
     },
     {
       "$id": "17",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Glowstick",
       "Type": 4,
       "Price": 1
     },
     {
       "$id": "18",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Paint, ltr",
       "Type": 4,
       "Price": 10
     },
     {
       "$id": "19",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Flash Tape, mtr",
       "Type": 4,
       "Price": 10
     },
     {
       "$id": "20",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Rope, mtr",
       "Type": 4,
       "Price": 2
     },
     {
       "$id": "21",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Breathing Mask",
       "Type": 4,
       "Price": 30
     },
     {
       "$id": "22",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Video Board, mtr2",
       "Type": 5,
       "Price": 100
     },
     {
       "$id": "23",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Data Chip",
       "Type": 5,
       "Price": 10
     },
     {
       "$id": "24",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Logcompass",
       "Type": 5,
       "Price": 50
     },
     {
       "$id": "25",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Digital Recorder",
       "Type": 5,
       "Price": 300
     },
     {
       "$id": "26",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Digital Camera",
       "Type": 5,
       "Price": 150
     },
     {
       "$id": "27",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "VideoCam",
       "Type": 5,
       "Price": 800
     },
     {
       "$id": "28",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "V/A Tape Player",
       "Type": 5,
       "Price": 40
     },
     {
       "$id": "29",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Videotape",
       "Type": 5,
       "Price": 4
     },
     {
       "$id": "30",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Pocket TV",
       "Type": 5,
       "Price": 80
     },
     {
       "$id": "31",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Digital Chip Player",
       "Type": 5,
       "Price": 150
     },
     {
       "$id": "32",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Digital Music Chip",
       "Type": 5,
       "Price": 20
     },
     {
       "$id": "33",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Electric Guitar",
       "Type": 5,
       "Price": 250
     },
     {
       "$id": "34",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Electric Keyboard",
       "Type": 5,
       "Price": 700
     },
     {
       "$id": "35",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Drum Synth",
       "Type": 5,
       "Price": 600
     },
     {
       "$id": "36",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Amplifier",
       "Type": 5,
       "Price": 750
     },
     {
       "$id": "37",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Light Pistol/SMG (100)",
       "Type": 0,
       "Price": 15
     },
     {
       "$id": "38",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Medium Pistol/SMG (50)",
       "Type": 0,
       "Price": 15
     },
     {
       "$id": "39",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Heavy Pistol/SMG (50)",
       "Type": 0,
       "Price": 18
     },
     {
       "$id": "40",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Very Heavy Pistol (50)",
       "Type": 0,
       "Price": 20
     },
     {
       "$id": "41",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Assault Rifle (100)",
       "Type": 0,
       "Price": 40
     },
     {
       "$id": "42",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Shotgun (12)",
       "Type": 0,
       "Price": 15
     },
     {
       "$id": "43",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, 20mm round (1)",
       "Type": 0,
       "Price": 25
     },
     {
       "$id": "44",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Std. Arrows (12)",
       "Type": 0,
       "Price": 24
     },
     {
       "$id": "45",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Std. Crossbow bolts (12)",
       "Type": 0,
       "Price": 30
     },
     {
       "$id": "46",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Airgun pellets (100)",
       "Type": 0,
       "Price": 6
     },
     {
       "$id": "47",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Needlegun rounds (50)",
       "Type": 0,
       "Price": 25
     },
     {
       "$id": "48",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Flamethrower (1)",
       "Type": 0,
       "Price": 50
     },
     {
       "$id": "49",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Std. Micro Missile (4)",
       "Type": 0,
       "Price": 100
     },
     {
       "$id": "50",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, AP Light Pistol/SMG (100)",
       "Type": 0,
       "Price": 45
     },
     {
       "$id": "51",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Ammo, Needlegun rounds, acid/drug (50)",
       "Type": 0,
       "Price": 125
     },
     {
       "$id": "52",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Silencer",
       "Type": 1,
       "Price": 100
     },
     {
       "$id": "53",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Holster, any",
       "Type": 1,
       "Price": 20
     },
     {
       "$id": "54",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Shoulder sling",
       "Type": 1,
       "Price": 5
     },
     {
       "$id": "55",
+      "$type": "CP48.Item, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Name": "Pistol Laser Pointer (+1WA)",
       "Type": 1,
       "Price": 100
     },
     {
       "$id": "56",
+      "$type": "CP48.Armor, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Head": 0,
       "Torso": 4,
       "Arms": 4,
@@ -339,6 +395,7 @@
     },
     {
       "$id": "57",
+      "$type": "CP48.Armor, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Head": 0,
       "Torso": 0,
       "Arms": 0,
@@ -351,6 +408,7 @@
     },
     {
       "$id": "58",
+      "$type": "CP48.Armor, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Head": 0,
       "Torso": 10,
       "Arms": 0,
@@ -363,6 +421,7 @@
     },
     {
       "$id": "59",
+      "$type": "CP48.Armor, CP2020Chargen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Head": 25,
       "Torso": 25,
       "Arms": 25,

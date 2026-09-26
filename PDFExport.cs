@@ -135,14 +135,14 @@ namespace CP48
                 form.GetField("Name").SetValue(cname);
                 form.GetField("INT").SetValue(character.Stats.Int.Value.ToString());
                 form.GetField("REF1").SetValue(character.Stats.Ref.Value.ToString());
-                form.GetField("REF2").SetValue(character.Stats.Ref.Remaining.ToString());
+                form.GetField("REF2").SetValue(character.Stats.Ref.Value.ToString());
                 form.GetField("TECH").SetValue(character.Stats.Tech.Value.ToString());
                 form.GetField("COOL").SetValue(character.Stats.Cool.Value.ToString());
                 form.GetField("ATTR").SetValue(character.Stats.Attr.Value.ToString());
                 form.GetField("LUCK").SetValue(character.Stats.Luck.Value.ToString());
                 form.GetField("MA").SetValue(character.Stats.MA.Value.ToString());
                 form.GetField("BODY").SetValue(character.Stats.Body.Value.ToString());
-                form.GetField("EMP1").SetValue(character.Stats.Emp.Remaining.ToString());
+                form.GetField("EMP1").SetValue(character.Stats.Emp.Value.ToString());
                 form.GetField("EMP2").SetValue(character.Stats.Emp.Value.ToString());
                 form.GetField("RUN").SetValue(character.Stats.Run.ToString());
                 form.GetField("LEAP").SetValue(character.Stats.Leap.ToString());
@@ -161,7 +161,7 @@ namespace CP48
                     }
                 }
                 List<Armor> boughtArmor = new List<Armor>();
-                form.GetField("ItemName1").SetValue("Initial Funds, " + character.InitialFunds.ToString() + "$");
+                form.GetField("ItemName1").SetValue("Funds, " + character.InitialFunds.ToString() + "$");
                 for (int x = 0; x < character.Items.Count; x++)
                 {
                     string res = "";

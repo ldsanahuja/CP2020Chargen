@@ -101,14 +101,19 @@ namespace CP48
                 switch (Type)
                 {
                     case WeaponCategory.Light_Handgun:
-                    case WeaponCategory.Medium_Handgun:
-                    case WeaponCategory.Heavy_Handgun:
-                    case WeaponCategory.Very_Heavy_Handgun:
                         return "P";
+                    case WeaponCategory.Medium_Handgun:
+                        return "MP";
+                    case WeaponCategory.Heavy_Handgun:
+                        return "HP";
+                    case WeaponCategory.Very_Heavy_Handgun:
+                        return "VHP";
                     case WeaponCategory.Light_SMG:
-                    case WeaponCategory.Medium_SMG:
-                    case WeaponCategory.Heavy_SMG:
                         return "SMG";
+                    case WeaponCategory.Medium_SMG:
+                        return "MSMG";
+                    case WeaponCategory.Heavy_SMG:
+                        return "HSMG";
                     case WeaponCategory.Assault_Rifle:
                         return "RIF";
                     case WeaponCategory.Shotgun:
@@ -133,18 +138,35 @@ namespace CP48
 
     public static class EquipmentManager
     {
+#if DEBUG
+        public static bool CreateTestEquipmentXML = false;
+        public static bool OverwriteSolutionEquipmentXML = false;
+#endif
         public static Equipment DB = new Equipment();
         private const string itemsXML = @"Data/Items.XML";
         private const string weaponsXML = @"Data/Weapons.XML";
 
         static EquipmentManager()
         {
-          //  LoadItemsXML();
-          //  LoadWeaponsXML();
-           // CreateTestWeapons();
-           // SaveWeaponsXMLTest();
-            CreateTestItems();
-            SaveItemsXMLTest();
+#if DEBUG
+            if (!CreateTestEquipmentXML)
+            {
+                LoadItemsXML();
+                LoadWeaponsXML();
+            }
+            else
+            {
+                CreateTestWeapons();
+                SaveWeaponsXMLTest();
+                CreateTestItems();
+                SaveItemsXMLTest();
+            }
+#else
+                LoadItemsXML();
+                LoadWeaponsXML();
+
+#endif
+
         }
 
         private static void LoadItemsXML()
@@ -159,6 +181,8 @@ namespace CP48
                 DB.Weapons = new List<Weapon>();
             DB.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(System.IO.File.ReadAllText(weaponsXML));
         }
+#if DEBUG
+
         private static void SaveItemsXMLTest()
         {
             var settings = new JsonSerializerSettings();
@@ -168,6 +192,10 @@ namespace CP48
             settings.TypeNameHandling = TypeNameHandling.All;
             string serData = JsonConvert.SerializeObject(DB.Items, Formatting.Indented, settings);
             System.IO.File.WriteAllText(itemsXML, serData);
+#if DEBUG            
+            if(CreateTestEquipmentXML)
+                System.IO.File.Copy(itemsXML, @"../../Data/Items.xml", true);
+#endif
         }
         private static void SaveWeaponsXMLTest()
         {
@@ -176,6 +204,10 @@ namespace CP48
             settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
             string serData = JsonConvert.SerializeObject(DB.Weapons, Formatting.Indented, settings);
             System.IO.File.WriteAllText(weaponsXML, serData);
+#if DEBUG
+            if(CreateTestEquipmentXML)
+                System.IO.File.Copy(weaponsXML, @"../../Data/Weapons.xml", true);
+#endif
         }
         private static void CreateTestItems()
         {
@@ -320,5 +352,6 @@ namespace CP48
             DB.Weapons.Add(testw9);
             DB.Weapons.Add(testw10);
         }
+#endif
     }
 }

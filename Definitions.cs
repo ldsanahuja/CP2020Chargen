@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace CP48
 {
-    public enum eGender
-    {
-        Male,
-        Female,
-        Other
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum eGender:int
+    {        
+        Male = 0,
+        Female = 1,
+        Other = 2
     }
     public enum eSkill
     {
@@ -974,7 +976,7 @@ namespace CP48
             }
 
         }
-        private static Sheet LoadXML(string pathAndFilename)
+        public static Sheet LoadXML(string pathAndFilename)
         {
             Sheet res = new Sheet();
             try

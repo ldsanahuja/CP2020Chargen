@@ -29,6 +29,7 @@ namespace CP48
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +88,9 @@ namespace CP48
             this.Qtty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvWeapons = new System.Windows.Forms.DataGridView();
+            this.WeaponName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WeaponType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.tbWorked = new System.Windows.Forms.TextBox();
@@ -95,11 +99,9 @@ namespace CP48
             this.btnShowWeapons = new System.Windows.Forms.Button();
             this.btnItRemove = new System.Windows.Forms.Button();
             this.btnWRemove = new System.Windows.Forms.Button();
-            this.WeaponName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WeaponType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label18 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
@@ -135,6 +137,7 @@ namespace CP48
             this.loadXMLToolStripMenuItem.Name = "loadXMLToolStripMenuItem";
             this.loadXMLToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.loadXMLToolStripMenuItem.Text = "&Load XML...";
+            this.loadXMLToolStripMenuItem.Click += new System.EventHandler(this.loadXMLToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
@@ -276,6 +279,7 @@ namespace CP48
             this.tbMODREF.ReadOnly = true;
             this.tbMODREF.Size = new System.Drawing.Size(35, 20);
             this.tbMODREF.TabIndex = 13;
+            this.tbMODREF.TabStop = false;
             // 
             // label5
             // 
@@ -396,6 +400,7 @@ namespace CP48
             this.tbLift.ReadOnly = true;
             this.tbLift.Size = new System.Drawing.Size(35, 20);
             this.tbLift.TabIndex = 36;
+            this.tbLift.TabStop = false;
             // 
             // label12
             // 
@@ -413,6 +418,7 @@ namespace CP48
             this.tbLeap.ReadOnly = true;
             this.tbLeap.Size = new System.Drawing.Size(35, 20);
             this.tbLeap.TabIndex = 34;
+            this.tbLeap.TabStop = false;
             // 
             // label13
             // 
@@ -430,6 +436,7 @@ namespace CP48
             this.tbRun.ReadOnly = true;
             this.tbRun.Size = new System.Drawing.Size(35, 20);
             this.tbRun.TabIndex = 32;
+            this.tbRun.TabStop = false;
             // 
             // tbEMP
             // 
@@ -454,6 +461,7 @@ namespace CP48
             this.tbMODEMP.ReadOnly = true;
             this.tbMODEMP.Size = new System.Drawing.Size(35, 20);
             this.tbMODEMP.TabIndex = 29;
+            this.tbMODEMP.TabStop = false;
             // 
             // label15
             // 
@@ -624,6 +632,26 @@ namespace CP48
             this.dgvWeapons.Size = new System.Drawing.Size(437, 84);
             this.dgvWeapons.TabIndex = 47;
             // 
+            // WeaponName
+            // 
+            this.WeaponName.HeaderText = "Weapon Name";
+            this.WeaponName.Name = "WeaponName";
+            this.WeaponName.ReadOnly = true;
+            this.WeaponName.Width = 200;
+            // 
+            // WeaponType
+            // 
+            this.WeaponType.HeaderText = "Type";
+            this.WeaponType.Name = "WeaponType";
+            this.WeaponType.ReadOnly = true;
+            // 
+            // WPrice
+            // 
+            this.WPrice.HeaderText = "Price";
+            this.WPrice.Name = "WPrice";
+            this.WPrice.ReadOnly = true;
+            this.WPrice.Width = 75;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -702,26 +730,6 @@ namespace CP48
             this.btnWRemove.UseVisualStyleBackColor = true;
             this.btnWRemove.Click += new System.EventHandler(this.btnWRemove_Click);
             // 
-            // WeaponName
-            // 
-            this.WeaponName.HeaderText = "Weapon Name";
-            this.WeaponName.Name = "WeaponName";
-            this.WeaponName.ReadOnly = true;
-            this.WeaponName.Width = 200;
-            // 
-            // WeaponType
-            // 
-            this.WeaponType.HeaderText = "Type";
-            this.WeaponType.Name = "WeaponType";
-            this.WeaponType.ReadOnly = true;
-            // 
-            // WPrice
-            // 
-            this.WPrice.HeaderText = "Price";
-            this.WPrice.Name = "WPrice";
-            this.WPrice.ReadOnly = true;
-            this.WPrice.Width = 75;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -738,11 +746,21 @@ namespace CP48
             this.statusText.Size = new System.Drawing.Size(34, 17);
             this.statusText.Text = "         ";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(514, 39);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "months";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 440);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnWRemove);
             this.Controls.Add(this.btnItRemove);
@@ -798,6 +816,7 @@ namespace CP48
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "CP 2020 Character Helper";
@@ -887,6 +906,7 @@ namespace CP48
         private System.Windows.Forms.DataGridViewTextBoxColumn WPrice;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusText;
+        private System.Windows.Forms.Label label18;
     }
 }
 

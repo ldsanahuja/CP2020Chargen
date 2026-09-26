@@ -67,7 +67,7 @@
       "Range": "50m",
       "Price": 250,
       "DamageAndAmmo": "2D6+1(9mm)",
-      "CategoryString": "P"
+      "CategoryString": "MP"
     },
     {
       "$id": "6",
@@ -84,7 +84,7 @@
       "Range": "50m",
       "Price": 250,
       "DamageAndAmmo": "2D6+3(10mm)",
-      "CategoryString": "P"
+      "CategoryString": "MP"
     },
     {
       "$id": "7",
@@ -101,7 +101,7 @@
       "Range": "50m",
       "Price": 300,
       "DamageAndAmmo": "2D6+1(9mm)",
-      "CategoryString": "P"
+      "CategoryString": "MP"
     },
     {
       "$id": "8",
@@ -118,7 +118,7 @@
       "Range": "50m",
       "Price": 350,
       "DamageAndAmmo": "3D6(11mm)",
-      "CategoryString": "P"
+      "CategoryString": "HP"
     },
     {
       "$id": "9",
@@ -135,7 +135,7 @@
       "Range": "50m",
       "Price": 400,
       "DamageAndAmmo": "3D6(11mm)",
-      "CategoryString": "P"
+      "CategoryString": "HP"
     },
     {
       "$id": "10",
@@ -152,7 +152,7 @@
       "Range": "50m",
       "Price": 450,
       "DamageAndAmmo": "4D6+1(12mm)",
-      "CategoryString": "P"
+      "CategoryString": "VHP"
     },
     {
       "$id": "11",
@@ -169,7 +169,7 @@
       "Range": "50m",
       "Price": 500,
       "DamageAndAmmo": "4D6+1(12mm)",
-      "CategoryString": "P"
+      "CategoryString": "VHP"
     }
   ]
 }
