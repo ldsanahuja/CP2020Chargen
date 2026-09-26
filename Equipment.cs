@@ -193,7 +193,7 @@ namespace CP48
             string serData = JsonConvert.SerializeObject(DB.Items, Formatting.Indented, settings);
             System.IO.File.WriteAllText(itemsXML, serData);
 #if DEBUG            
-            if(CreateTestEquipmentXML)
+            if(OverwriteSolutionEquipmentXML)
                 System.IO.File.Copy(itemsXML, @"../../Data/Items.xml", true);
 #endif
         }
@@ -205,7 +205,7 @@ namespace CP48
             string serData = JsonConvert.SerializeObject(DB.Weapons, Formatting.Indented, settings);
             System.IO.File.WriteAllText(weaponsXML, serData);
 #if DEBUG
-            if(CreateTestEquipmentXML)
+            if(OverwriteSolutionEquipmentXML)
                 System.IO.File.Copy(weaponsXML, @"../../Data/Weapons.xml", true);
 #endif
         }
