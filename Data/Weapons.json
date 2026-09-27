@@ -1,8 +1,10 @@
 {
   "$id": "1",
+  "$type": "System.Collections.Generic.List`1[[CP2020.Weapon, CP2020Chargen]], mscorlib",
   "$values": [
     {
       "$id": "2",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "BudgetArms C13",
       "Type": 0,
       "WA": "-1",
@@ -20,6 +22,7 @@
     },
     {
       "$id": "3",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Dai Lung Cybermag 15",
       "Type": 0,
       "WA": "-1",
@@ -37,6 +40,7 @@
     },
     {
       "$id": "4",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Federated Arms X22",
       "Type": 0,
       "WA": "0",
@@ -54,6 +58,7 @@
     },
     {
       "$id": "5",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Militech Avenger",
       "Type": 1,
       "WA": "0",
@@ -71,6 +76,7 @@
     },
     {
       "$id": "6",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Dai Lung Streetmaster",
       "Type": 1,
       "WA": "0",
@@ -88,6 +94,7 @@
     },
     {
       "$id": "7",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Federated Arms X9",
       "Type": 1,
       "WA": "0",
@@ -105,6 +112,7 @@
     },
     {
       "$id": "8",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "BudgetArms Auto3",
       "Type": 2,
       "WA": "-1",
@@ -122,6 +130,7 @@
     },
     {
       "$id": "9",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Sternmeyer T35",
       "Type": 2,
       "WA": "0",
@@ -139,6 +148,7 @@
     },
     {
       "$id": "10",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Armalite 44",
       "Type": 3,
       "WA": "0",
@@ -156,6 +166,7 @@
     },
     {
       "$id": "11",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Colt AMT 2000",
       "Type": 3,
       "WA": "0",
@@ -173,6 +184,7 @@
     },
     {
       "$id": "12",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Uzi Miniauto 9",
       "Type": 4,
       "WA": "+1",
@@ -190,6 +202,7 @@
     },
     {
       "$id": "13",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "H&K MP2013",
       "Type": 4,
       "WA": "+1",
@@ -207,6 +220,7 @@
     },
     {
       "$id": "14",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Fed. Arms Tech Assault II",
       "Type": 4,
       "WA": "+1",
@@ -224,6 +238,7 @@
     },
     {
       "$id": "15",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Arasaka Minami 10",
       "Type": 5,
       "WA": "+1",
@@ -241,6 +256,7 @@
     },
     {
       "$id": "16",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "H&K MPK9",
       "Type": 5,
       "WA": "+1",
@@ -258,6 +274,7 @@
     },
     {
       "$id": "17",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Sternmeyer SMG21",
       "Type": 6,
       "WA": "-1",
@@ -275,6 +292,7 @@
     },
     {
       "$id": "18",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "H&K MPK11",
       "Type": 6,
       "WA": "0",
@@ -292,6 +310,7 @@
     },
     {
       "$id": "19",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Ingram MAC14",
       "Type": 6,
       "WA": "-2",
@@ -309,6 +328,7 @@
     },
     {
       "$id": "20",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Militech Ronin LAR",
       "Type": 7,
       "WA": "+1",
@@ -326,6 +346,7 @@
     },
     {
       "$id": "21",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "AKR-20 MAR",
       "Type": 7,
       "WA": "0",
@@ -343,6 +364,7 @@
     },
     {
       "$id": "22",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "FN-RAL HAR",
       "Type": 7,
       "WA": "-1",
@@ -360,6 +382,7 @@
     },
     {
       "$id": "23",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Kalashnikov A80 HAR",
       "Type": 7,
       "WA": "-1",
@@ -377,6 +400,7 @@
     },
     {
       "$id": "24",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Araska RA 12",
       "Type": 8,
       "WA": "-1",
@@ -394,6 +418,7 @@
     },
     {
       "$id": "25",
+      "$type": "CP2020.Weapon, CP2020Chargen",
       "Name": "Sternmeyer Stakeout 10",
       "Type": 8,
       "WA": "-2",

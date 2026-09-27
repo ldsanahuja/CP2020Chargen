@@ -91,15 +91,15 @@ namespace CP2020
                         break;
                 }
                 form.GetField("INT").SetValue(character.Stats.Int.Value.ToString());
-                form.GetField("REF1").SetValue(character.Stats.Ref.Value.ToString());
                 form.GetField("REF2").SetValue(character.Stats.Ref.Value.ToString());
+                form.GetField("REF1").SetValue(Math.Abs(character.Stats.Ref.Value + character.Stats.Ref.Modifier).ToString());
                 form.GetField("TECH").SetValue(character.Stats.Tech.Value.ToString());
                 form.GetField("COOL").SetValue(character.Stats.Cool.Value.ToString());
                 form.GetField("ATTR").SetValue(character.Stats.Attr.Value.ToString());
                 form.GetField("LUCK").SetValue(character.Stats.Luck.Value.ToString());
                 form.GetField("MA").SetValue(character.Stats.MA.Value.ToString());
                 form.GetField("BODY").SetValue(character.Stats.Body.Value.ToString());
-                form.GetField("EMP1").SetValue(character.Stats.Emp.Value.ToString());
+                form.GetField("EMP1").SetValue(Math.Abs(character.Stats.Emp.Value - character.Stats.Emp.Modifier).ToString());
                 form.GetField("EMP2").SetValue(character.Stats.Emp.Value.ToString());
                 form.GetField("RUN").SetValue(character.Stats.Run.ToString());
                 form.GetField("LEAP").SetValue(character.Stats.Leap.ToString());
@@ -118,7 +118,7 @@ namespace CP2020
                     }
                 }
                 List<Armor> boughtArmor = new List<Armor>();
-                form.GetField("ItemName1").SetValue("Funds, " + character.InitialFunds.ToString() + "$");
+                form.GetField("ItemName1").SetValue("Funds, " + character.InitialFunds.ToString() + "");
                 for (int x = 0; x < character.Items.Count; x++)
                 {
                     string res = "";
@@ -156,6 +156,20 @@ namespace CP2020
                     form.GetField("WeaponShots" + slot).SetValue(character.Weapons[x].weapon.Shots);
                     form.GetField("WeaponROF" + slot).SetValue(character.Weapons[x].weapon.RoF);
                     form.GetField("WeaponRel" + slot).SetValue(character.Weapons[x].weapon.Reliability);
+                }
+                int cybercost = 0;
+                for(int x = 0; x < character.Cyberware.Count; x++)
+                {
+                    form.GetField("CWare" + (x + 1).ToString()).SetValue(character.Cyberware[x].cyberware.Name);
+                    form.GetField("CWareH" + (x + 1).ToString()).SetValue(character.Cyberware[x].humanity.ToString());
+                    form.GetField("CWareC" + (x + 1).ToString()).SetValue(character.Cyberware[x].cyberware.Price.ToString());
+                    cybercost += character.Cyberware[x].cyberware.Price;
+                }
+                form.GetField("HumanityLoss").SetValue(Math.Abs((character.Stats.Emp.Value * 10) - character.HumanityLoss).ToString());
+                if(character.Cyberware.Count > 0)
+                {
+                    form.GetField("CWare_TotalHLoss").SetValue(character.HumanityLoss.ToString());
+                    form.GetField("CWare_TotalCost").SetValue(cybercost.ToString());
                 }
                 int headprot = 0;
                 int armprot = 0;                

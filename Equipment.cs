@@ -215,8 +215,17 @@ namespace CP2020
         private const string itemsXML = @"Data/Items.json";
         private const string weaponsXML = @"Data/Weapons.json";
         private const string cyberwareXML = @"Data/Cyberware.json";
+
+        private static JsonSerializerSettings settings;
         static EquipmentManager()
         {
+            settings = new JsonSerializerSettings();
+            settings.MetadataPropertyHandling = MetadataPropertyHandling.ReadAhead;
+            settings.NullValueHandling = NullValueHandling.Include;
+            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            settings.TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple;
+            settings.TypeNameHandling = TypeNameHandling.All;
+
 #if DEBUG
             if (!CreateTestEquipmentXML)
             {
@@ -245,29 +254,28 @@ namespace CP2020
         {
             if (DB.Items == null)
                 DB.Items = new List<Item>();
-            DB.Items = JsonConvert.DeserializeObject<List<Item>>(System.IO.File.ReadAllText(itemsXML));
+            DB.Items = JsonConvert.DeserializeObject<List<Item>>(System.IO.File.ReadAllText(itemsXML),settings);
         }
         private static void LoadWeaponsXML()
         {
             if (DB.Weapons == null)
                 DB.Weapons = new List<Weapon>();
-            DB.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(System.IO.File.ReadAllText(weaponsXML));
+            DB.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(System.IO.File.ReadAllText(weaponsXML), settings);
         }
         private static void LoadCyberwareXML()
         {
             if (DB.Cyberwares == null)
                 DB.Cyberwares = new List<Cyberware>();
-            DB.Cyberwares = JsonConvert.DeserializeObject<List<Cyberware>>(System.IO.File.ReadAllText(cyberwareXML));
+            DB.Cyberwares = JsonConvert.DeserializeObject<List<Cyberware>>(System.IO.File.ReadAllText(cyberwareXML),settings);
+            foreach(Cyberware t in DB.Cyberwares)
+            {
+                Console.WriteLine(t.GetType().Name);
+            }
         }
 #if DEBUG
 
         private static void SaveItemsXMLTest()
         {
-            var settings = new JsonSerializerSettings();
-            settings.NullValueHandling = NullValueHandling.Include;
-            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
-            settings.TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Full;
-            settings.TypeNameHandling = TypeNameHandling.All;
             string serData = JsonConvert.SerializeObject(DB.Items, Newtonsoft.Json.Formatting.Indented, settings);
             System.IO.File.WriteAllText(itemsXML, serData);
             if (OverwriteSolutionEquipmentXML)
@@ -275,9 +283,6 @@ namespace CP2020
         }
         private static void SaveWeaponsXMLTest()
         {
-            var settings = new JsonSerializerSettings();
-            settings.NullValueHandling = NullValueHandling.Include;
-            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
             string serData = JsonConvert.SerializeObject(DB.Weapons, Newtonsoft.Json.Formatting.Indented, settings);
             System.IO.File.WriteAllText(weaponsXML, serData);
             if(OverwriteSolutionEquipmentXML)
@@ -285,11 +290,6 @@ namespace CP2020
         }
         private static void SaveCyberwareXMLTest()
         {
-            var settings = new JsonSerializerSettings();
-            settings.NullValueHandling = NullValueHandling.Include;
-            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
-            settings.TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple;
-            settings.TypeNameHandling = TypeNameHandling.All;
             string serData = JsonConvert.SerializeObject(DB.Cyberwares, Newtonsoft.Json.Formatting.Indented, settings);
             System.IO.File.WriteAllText(cyberwareXML, serData);
             if (OverwriteSolutionEquipmentXML)

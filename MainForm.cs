@@ -687,6 +687,9 @@ namespace CP2020
                 return;
             }
             float humanityloss = w.Humanity;
+            if (w is Cyberware_D6 d6c)
+                humanityloss = d6c.Humanity;
+
             if(Math.Abs(CurrentSheet.Stats.Emp.Modifier - CurrentSheet.Stats.Emp.Value) <= 1)
             {
                 statusText.Text = "Can't add more Cyberware with your current Empathy";
