@@ -1,5 +1,5 @@
 ﻿
-namespace CP48
+namespace CP2020
 {
     partial class MainForm
     {
@@ -37,6 +37,8 @@ namespace CP48
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.expotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFCharacterSheetENToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFCharacterSheetESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -102,11 +104,20 @@ namespace CP48
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusText = new System.Windows.Forms.ToolStripStatusLabel();
             this.label18 = new System.Windows.Forms.Label();
+            this.dgvCyberware = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCRemove = new System.Windows.Forms.Button();
+            this.btnShowCyberware = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tbHumLoss = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWeapons)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCyberware)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -162,10 +173,26 @@ namespace CP48
             // 
             // expotToolStripMenuItem
             // 
+            this.expotToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pDFCharacterSheetENToolStripMenuItem,
+            this.pDFCharacterSheetESToolStripMenuItem});
             this.expotToolStripMenuItem.Name = "expotToolStripMenuItem";
             this.expotToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.expotToolStripMenuItem.Text = "&Export";
-            this.expotToolStripMenuItem.Click += new System.EventHandler(this.expotToolStripMenuItem_Click);
+            // 
+            // pDFCharacterSheetENToolStripMenuItem
+            // 
+            this.pDFCharacterSheetENToolStripMenuItem.Name = "pDFCharacterSheetENToolStripMenuItem";
+            this.pDFCharacterSheetENToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.pDFCharacterSheetENToolStripMenuItem.Text = "PDF Character Sheet EN";
+            this.pDFCharacterSheetENToolStripMenuItem.Click += new System.EventHandler(this.pDFCharacterSheetENToolStripMenuItem_Click);
+            // 
+            // pDFCharacterSheetESToolStripMenuItem
+            // 
+            this.pDFCharacterSheetESToolStripMenuItem.Name = "pDFCharacterSheetESToolStripMenuItem";
+            this.pDFCharacterSheetESToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.pDFCharacterSheetESToolStripMenuItem.Text = "PDF Character Sheet ES";
+            this.pDFCharacterSheetESToolStripMenuItem.Click += new System.EventHandler(this.pDFCharacterSheetESToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -489,7 +516,7 @@ namespace CP48
             this.dgvSkills.RowHeadersVisible = false;
             this.dgvSkills.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSkills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvSkills.Size = new System.Drawing.Size(249, 156);
+            this.dgvSkills.Size = new System.Drawing.Size(249, 197);
             this.dgvSkills.TabIndex = 37;
             // 
             // Skill
@@ -509,7 +536,7 @@ namespace CP48
             // 
             this.cbAllSkills.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAllSkills.FormattingEnabled = true;
-            this.cbAllSkills.Location = new System.Drawing.Point(271, 308);
+            this.cbAllSkills.Location = new System.Drawing.Point(270, 348);
             this.cbAllSkills.Name = "cbAllSkills";
             this.cbAllSkills.Size = new System.Drawing.Size(132, 21);
             this.cbAllSkills.TabIndex = 39;
@@ -517,7 +544,7 @@ namespace CP48
             // btnAddSkill
             // 
             this.btnAddSkill.Enabled = false;
-            this.btnAddSkill.Location = new System.Drawing.Point(338, 335);
+            this.btnAddSkill.Location = new System.Drawing.Point(337, 375);
             this.btnAddSkill.Name = "btnAddSkill";
             this.btnAddSkill.Size = new System.Drawing.Size(65, 23);
             this.btnAddSkill.TabIndex = 40;
@@ -528,7 +555,7 @@ namespace CP48
             // btnRemoveSkill
             // 
             this.btnRemoveSkill.Enabled = false;
-            this.btnRemoveSkill.Location = new System.Drawing.Point(270, 335);
+            this.btnRemoveSkill.Location = new System.Drawing.Point(269, 375);
             this.btnRemoveSkill.Name = "btnRemoveSkill";
             this.btnRemoveSkill.Size = new System.Drawing.Size(65, 23);
             this.btnRemoveSkill.TabIndex = 41;
@@ -541,7 +568,7 @@ namespace CP48
             this.rtbSkillPoints.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbSkillPoints.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtbSkillPoints.DetectUrls = false;
-            this.rtbSkillPoints.Location = new System.Drawing.Point(15, 364);
+            this.rtbSkillPoints.Location = new System.Drawing.Point(15, 400);
             this.rtbSkillPoints.Name = "rtbSkillPoints";
             this.rtbSkillPoints.ReadOnly = true;
             this.rtbSkillPoints.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -734,7 +761,7 @@ namespace CP48
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusText});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 418);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 438);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(864, 22);
             this.statusStrip1.TabIndex = 56;
@@ -755,11 +782,93 @@ namespace CP48
             this.label18.TabIndex = 57;
             this.label18.Text = "months";
             // 
+            // dgvCyberware
+            // 
+            this.dgvCyberware.AllowUserToAddRows = false;
+            this.dgvCyberware.AllowUserToDeleteRows = false;
+            this.dgvCyberware.AllowUserToResizeRows = false;
+            this.dgvCyberware.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCyberware.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dgvCyberware.Location = new System.Drawing.Point(414, 315);
+            this.dgvCyberware.MultiSelect = false;
+            this.dgvCyberware.Name = "dgvCyberware";
+            this.dgvCyberware.ReadOnly = true;
+            this.dgvCyberware.RowHeadersVisible = false;
+            this.dgvCyberware.Size = new System.Drawing.Size(437, 84);
+            this.dgvCyberware.TabIndex = 58;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cyberware";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Qtty";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Humanity";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 75;
+            // 
+            // btnCRemove
+            // 
+            this.btnCRemove.Enabled = false;
+            this.btnCRemove.Location = new System.Drawing.Point(692, 404);
+            this.btnCRemove.Name = "btnCRemove";
+            this.btnCRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnCRemove.TabIndex = 60;
+            this.btnCRemove.Text = "Remove";
+            this.btnCRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnShowCyberware
+            // 
+            this.btnShowCyberware.Enabled = false;
+            this.btnShowCyberware.Location = new System.Drawing.Point(775, 405);
+            this.btnShowCyberware.Name = "btnShowCyberware";
+            this.btnShowCyberware.Size = new System.Drawing.Size(75, 23);
+            this.btnShowCyberware.TabIndex = 59;
+            this.btnShowCyberware.Text = "Cyberware...";
+            this.btnShowCyberware.UseVisualStyleBackColor = true;
+            this.btnShowCyberware.Click += new System.EventHandler(this.btnShowCyberware_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(414, 414);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 13);
+            this.label19.TabIndex = 61;
+            this.label19.Text = "Humanity Loss";
+            // 
+            // tbHumLoss
+            // 
+            this.tbHumLoss.Location = new System.Drawing.Point(496, 411);
+            this.tbHumLoss.Name = "tbHumLoss";
+            this.tbHumLoss.ReadOnly = true;
+            this.tbHumLoss.Size = new System.Drawing.Size(45, 20);
+            this.tbHumLoss.TabIndex = 62;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 440);
+            this.ClientSize = new System.Drawing.Size(864, 460);
+            this.Controls.Add(this.tbHumLoss);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.btnCRemove);
+            this.Controls.Add(this.btnShowCyberware);
+            this.Controls.Add(this.dgvCyberware);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnWRemove);
@@ -828,6 +937,7 @@ namespace CP48
             ((System.ComponentModel.ISupportInitialize)(this.dgvWeapons)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCyberware)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -907,6 +1017,16 @@ namespace CP48
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusText;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ToolStripMenuItem pDFCharacterSheetENToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pDFCharacterSheetESToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgvCyberware;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button btnCRemove;
+        private System.Windows.Forms.Button btnShowCyberware;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox tbHumLoss;
     }
 }
 

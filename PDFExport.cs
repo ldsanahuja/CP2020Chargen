@@ -8,7 +8,7 @@ using iText.Forms;
 using iText.Forms.Fields;
 using iText.Kernel.Pdf;
 
-namespace CP48
+namespace CP2020
 {
     public enum PDF_EXPORT_RESULT
     {
@@ -17,108 +17,31 @@ namespace CP48
     }
     public static class PDFExport
     {
-        public const string BaseFile = @"Data\CSheet.pdf";
-
-        public static void ExportToPDF(Sheet characterSheet, string destination)
+        public const string BaseFileEn = @"Data\CSheet.pdf";
+        public const string BaseFileEs = @"Data\CSheetES.pdf";
+        public static void ExportToPDF(Sheet characterSheet, string destination, LANG lang)
         {
-            if (!File.Exists(BaseFile))
-            {
-                throw new Exception("Missing PDF base file!");
-            }
+            string baseFile = lang == LANG.LANG_EN ? BaseFileEn : BaseFileEs;
+
+            if (!File.Exists(baseFile))
+                {
+                    throw new Exception("Character sheet " + baseFile + " not found!");
+                }
             FileInfo file = new FileInfo(destination);
             file.Directory.Create();
 
-            StartExport(characterSheet, destination);
+            StartExport(characterSheet, destination, lang); //separate into lang functions if +2 lang
         }
 
-        private static void StartExportES(Sheet character, string destination)
+        private static void StartExport(Sheet character, string destination, LANG lang)
         {
-            PdfDocument pdf = new PdfDocument(new PdfReader(BaseFile), new PdfWriter(destination));
-            PdfAcroForm form = PdfFormCreator.GetAcroForm(pdf, true);
+            string baseFile = lang == LANG.LANG_EN ? BaseFileEn : BaseFileEs;
 
-            string cname = character.Name + " | ";
-            switch (character.Gender)
-            {
-                case eGender.Female:
-                    cname += "F";
-                    break;
-                case eGender.Male:
-                    cname += "M";
-                    break;
-                case eGender.Other:
-                    cname += "-";
-                    break;
-            }
-            cname += " | " + character.Age.ToString();
-            form.GetField("Text2").SetValue(cname);
-            form.GetField("int").SetValue(character.Stats.Int.Value.ToString());
-            form.GetField("ref").SetValue(character.Stats.Ref.Value.ToString());
-            form.GetField("ref2").SetValue(character.Stats.Ref.Remaining.ToString());
-            form.GetField("tec").SetValue(character.Stats.Tech.Value.ToString());
-            form.GetField("fri").SetValue(character.Stats.Cool.Value.ToString());
-            form.GetField("atr").SetValue(character.Stats.Attr.Value.ToString());
-            form.GetField("sue").SetValue(character.Stats.Luck.Value.ToString());
-            form.GetField("mov").SetValue(character.Stats.MA.Value.ToString());
-            form.GetField("tco").SetValue(character.Stats.Body.Value.ToString());
-            form.GetField("emp1").SetValue(character.Stats.Emp.Remaining.ToString());
-            form.GetField("emp2").SetValue(character.Stats.Emp.Value.ToString());
-            form.GetField("carr").SetValue(character.Stats.Run.ToString());
-            form.GetField("salto").SetValue(character.Stats.Leap.ToString());
-            form.GetField("leva").SetValue(character.Stats.Lift.ToString());
-
-            form.GetField("Text9").SetValue(character.Stats.SaveValue.ToString());
-            form.GetField("MTC").SetValue(character.Stats.BTCValue.ToString());
-
-            switch (character.Role)
-            {
-                case eRole.Solo:
-                    form.GetField("MER").SetValue("X");
-                    break;
-                case eRole.Rocker:
-                    form.GetField("ROCKER").SetValue("X");
-                    break;
-                case eRole.Netrunner:
-                    form.GetField("NETR").SetValue("X");
-                    break;
-                case eRole.Media:
-                    form.GetField("PERIOD").SetValue("X");
-                    break;
-                case eRole.Nomad:
-                    form.GetField("NOMAD").SetValue("X");
-                    break;
-                case eRole.Fixer:
-                    form.GetField("ARR").SetValue("X");
-                    break;
-                case eRole.Cop:
-                    form.GetField("POL").SetValue("X");
-                    break;
-                case eRole.Corpo:
-                    form.GetField("EJEC").SetValue("X");
-                    break;
-                case eRole.Techie:
-                    form.GetField("TECNI").SetValue("X");
-                    break;
-                case eRole.Medtech:
-                    form.GetField("TECNOMED").SetValue("X");
-                    break;
-            }
-            form.FlattenFields();
-            pdf.Close();
-
-            System.Diagnostics.ProcessStartInfo fileopener = new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = destination,
-                UseShellExecute = true
-            };
-            System.Diagnostics.Process.Start(fileopener);
-        }
-        private static void StartExport(Sheet character, string destination)
-        {
-            PdfDocument pdf = new PdfDocument(new PdfReader(BaseFile), new PdfWriter(destination));
+            PdfDocument pdf = new PdfDocument(new PdfReader(baseFile), new PdfWriter(destination));
             PdfAcroForm form = PdfFormCreator.GetAcroForm(pdf, true);
             try
             {
-                string cname = character.Name + " | ";
+                string cname = character.Name + "  (";
                 switch (character.Gender)
                 {
                     case eGender.Female:
@@ -131,8 +54,42 @@ namespace CP48
                         cname += "-";
                         break;
                 }
-                cname += " | " + character.Age.ToString();
+                
+                cname += ")  Age: " + character.Age.ToString();
                 form.GetField("Name").SetValue(cname);
+                switch (character.Role)
+                {
+                    case eRole.Solo:
+                        form.GetField("Solo").SetValue("checked");
+                        break;
+                    case eRole.Rocker:
+                        form.GetField("Rocker").SetValue("checked");
+                        break;
+                    case eRole.Netrunner:
+                        form.GetField("Netrunner").SetValue("checked");
+                        break;
+                    case eRole.Media:
+                        form.GetField("Media").SetValue("checked");
+                        break;
+                    case eRole.Nomad:
+                        form.GetField("Nomad").SetValue("checked");
+                        break;
+                    case eRole.Fixer:
+                        form.GetField("Fixer").SetValue("checked");
+                        break;
+                    case eRole.Cop:
+                        form.GetField("Cop").SetValue("checked");
+                        break;
+                    case eRole.Corpo:
+                        form.GetField("Corp").SetValue("checked");
+                        break;
+                    case eRole.Techie:
+                        form.GetField("Techie").SetValue("checked");
+                        break;
+                    case eRole.Medtech:
+                        form.GetField("Medtechie").SetValue("checked");
+                        break;
+                }
                 form.GetField("INT").SetValue(character.Stats.Int.Value.ToString());
                 form.GetField("REF1").SetValue(character.Stats.Ref.Value.ToString());
                 form.GetField("REF2").SetValue(character.Stats.Ref.Value.ToString());

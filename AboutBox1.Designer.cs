@@ -1,5 +1,5 @@
 ﻿
-namespace CP48
+namespace CP2020
 {
     partial class AboutBox1
     {

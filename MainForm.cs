@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CP48
+namespace CP2020
 {
     public partial class MainForm : Form
     {
         public RollForm rollForm;
         public ItemListForm itemsForm;
         public ItemListForm weaponsForm;
+        public ItemListForm cyberwareForm;
 
         public static bool UseMoney = true;
         public static Sheet CurrentSheet = new Sheet();
@@ -68,7 +69,7 @@ namespace CP48
             // skill combobox
             eSkill[] skills = System.Enum.GetValues(typeof(eSkill)).Cast<eSkill>().ToArray();
 
-            for (int x = 10; x < skills.Length; x++) //shouldnt select a role skill, start at 9
+            for (int x = 10; x < skills.Length -1; x++) //shouldnt select a role skill, start at 9, also ignore last (used for cware)
             {
                 cbAllSkills.Items.Add(Sheet.eSkillToString(skills[x]));
             }
@@ -210,6 +211,8 @@ namespace CP48
             btnShowWeapons.Enabled = true;
             btnItRemove.Enabled = true;
             btnWRemove.Enabled = true;
+            btnCRemove.Enabled = true;
+            btnShowCyberware.Enabled = true;
             statusText.Text = "Role selected";
         }
 
@@ -235,6 +238,11 @@ namespace CP48
             Item itemincell = EquipmentManager.DB.Items.Find(x => x.Name == dgvItems.Rows[rowIndex].Cells[0].Value.ToString());
             if (itemincell == null)
                 return;
+            if(itemincell is Armor armor)
+            {
+                CurrentSheet.Stats.Ref.Modifier -= armor.EV;
+                tbMODREF.Text = (CurrentSheet.Stats.Ref.Value - CurrentSheet.Stats.Ref.Modifier).ToString();
+            }
             if ((int)dgvItems.Rows[rowIndex].Cells[1].Value > 1)
             {
                 int val = (int)dgvItems.Rows[rowIndex].Cells[1].Value;
@@ -260,7 +268,15 @@ namespace CP48
             itemsForm.Show();
             
         }
-
+        private void btnShowCyberware_Click(object sender, EventArgs e)
+        {
+            if (cyberwareForm == null || cyberwareForm.IsDisposed)
+            {
+                cyberwareForm = new ItemListForm();
+                cyberwareForm.InitializeCyberwareWindow(this);
+            }
+            cyberwareForm.Show();
+        }
         private void btnWRemove_Click(object sender, EventArgs e)
         {
             if (dgvWeapons.SelectedCells == null || dgvWeapons.SelectedCells.Count < 1)
@@ -420,19 +436,6 @@ namespace CP48
                 Application.Exit();
         }
 
-        private void expotToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "pdf files(*.pdf) | *.pdf";
-            sfd.RestoreDirectory = true;
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                PDFExport.ExportToPDF(CurrentSheet, sfd.FileName);
-            }
-
-        }
-
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox1 aboutbox = new AboutBox1();
@@ -459,7 +462,29 @@ namespace CP48
             }
             statusText.Text = "File saved correctly";
         }
-
+        private void pDFCharacterSheetENToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "pdf files(*.pdf) | *.pdf";
+            sfd.RestoreDirectory = true;
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                PDFExport.ExportToPDF(CurrentSheet, sfd.FileName, LANG.LANG_EN);
+            }
+        }
+        private void pDFCharacterSheetESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "pdf files(*.pdf) | *.pdf";
+            sfd.RestoreDirectory = true;
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                PDFExport.ExportToPDF(CurrentSheet, sfd.FileName, LANG.LANG_ES);
+            }
+            */
+            MessageBox.Show("Not yet implemented");
+        }
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -473,6 +498,7 @@ namespace CP48
             }
             statusText.Text = "File saved correctly";
         }
+
         #endregion
         private void SetBaseInformation()
         {
@@ -494,7 +520,7 @@ namespace CP48
                 refl = Clamp(refl, 1, 10);
                 CurrentSheet.Stats.Ref.Value = refl;
                 tbREF.Text = refl.ToString();
-                tbMODREF.Text = refl.ToString();
+                tbMODREF.Text = Math.Abs(refl - CurrentSheet.Stats.Ref.Modifier).ToString();
             }
             if (Int32.TryParse(tbTECH.Text, out int tech))
             {
@@ -540,7 +566,7 @@ namespace CP48
                 emp = Clamp(emp, 1, 10);
                 CurrentSheet.Stats.Emp.Value = emp;
                 tbEMP.Text = emp.ToString();
-                tbMODEMP.Text = emp.ToString();
+                tbMODEMP.Text = Math.Abs(CurrentSheet.Stats.Emp.Modifier - emp).ToString();
             }
             if (rbMale.Checked)
             {
@@ -564,6 +590,7 @@ namespace CP48
                 if (Int32.TryParse(tbAge.Text, out int age))
                     CurrentSheet.Age = age;
             }
+            tbHumLoss.Text = CurrentSheet.HumanityLoss.ToString("00");
             hasChangesPending = true;
         }
         public void AddItem(Item i)
@@ -578,6 +605,8 @@ namespace CP48
             {
                 if (!CanAddArmor(armor))
                     return;
+                CurrentSheet.Stats.Ref.Modifier += armor.EV;
+                tbMODREF.Text = (CurrentSheet.Stats.Ref.Value - CurrentSheet.Stats.Ref.Modifier).ToString();
             }
             //end armor check
 
@@ -649,6 +678,55 @@ namespace CP48
             tbFunds.Text = CurrentSheet.InitialFunds.ToString();
             hasChangesPending = true;
             statusText.Text = "Added Weapon " + w.Name;
+        }
+        public void AddCyberware(Cyberware w)
+        {
+            if (CurrentSheet.InitialFunds < w.Price && UseMoney)
+            {
+                statusText.Text = "Not enough funds!";
+                return;
+            }
+            float humanityloss = w.Humanity;
+            if(Math.Abs(CurrentSheet.Stats.Emp.Modifier - CurrentSheet.Stats.Emp.Value) <= 1)
+            {
+                statusText.Text = "Can't add more Cyberware with your current Empathy";
+                return;
+            }
+            if(!String.IsNullOrEmpty(w.Requires))
+            {
+                int foundindex = CurrentSheet.Cyberware.FindIndex(x => x.cyberware.Name == w.Requires);
+                if(foundindex < 0)
+                {
+                    statusText.Text = "This cyberware requires: " + w.Requires;
+                    return;
+                }
+            }
+            if (CurrentSheet.Items.Count > 0 || CurrentSheet.Weapons.Count > 0)
+            {
+                if (!careerSkillLocked)
+                    careerSkillLocked = true;
+
+            }
+            else
+            {
+                if (careerSkillLocked)
+                    careerSkillLocked = false;
+            }
+
+            int lastAdded = dgvCyberware.Rows.Add(w.Name, w.Price, humanityloss.ToString("0"));
+            for (int x = 0; x < dgvCyberware.ColumnCount; x++)
+            {
+                string tooltip = "Surgery: " + w.Surgery + " | " + w.Description;
+                dgvCyberware.Rows[lastAdded].Cells[x].ToolTipText = tooltip;
+            }
+            if (UseMoney)
+                CurrentSheet.InitialFunds -= w.Price;
+
+            CurrentSheet.AddCyberware(w,  humanityloss,1);
+            tbFunds.Text = CurrentSheet.InitialFunds.ToString();
+            SetBaseInformation();
+            hasChangesPending = true;
+            statusText.Text = "Added Cyberware " + w.Name;
         }
 
         private void InformSkillPoints()
@@ -752,15 +830,15 @@ namespace CP48
             tbAge.Text = CurrentSheet.Age.ToString();
             tbINT.Text = CurrentSheet.Stats.Int.Value.ToString();
             tbREF.Text = CurrentSheet.Stats.Ref.Value.ToString();
-            tbMODREF.Text = CurrentSheet.Stats.Ref.Remaining.ToString();
+            tbMODREF.Text = (CurrentSheet.Stats.Ref.Value - CurrentSheet.Stats.Ref.Modifier).ToString();
             tbTECH.Text = CurrentSheet.Stats.Tech.Value.ToString();
             tbCOOL.Text = CurrentSheet.Stats.Cool.Value.ToString();
             tbATTR.Text = CurrentSheet.Stats.Attr.Value.ToString();
             tbLUCK.Text = CurrentSheet.Stats.Luck.Value.ToString();
             tbMA.Text = CurrentSheet.Stats.MA.Value.ToString();
             tbBODY.Text = CurrentSheet.Stats.Body.Value.ToString();
-            tbMODEMP.Text = CurrentSheet.Stats.Emp.Remaining.ToString();
             tbEMP.Text = CurrentSheet.Stats.Emp.Value.ToString();
+            tbMODEMP.Text = (CurrentSheet.Stats.Emp.Value - CurrentSheet.Stats.Emp.Modifier).ToString();
             tbRun.Text = CurrentSheet.Stats.Run.ToString();
             tbLeap.Text = CurrentSheet.Stats.Leap.ToString();
             tbLift.Text = CurrentSheet.Stats.Lift.ToString();
@@ -809,6 +887,8 @@ namespace CP48
             btnShowWeapons.Enabled = true;
             btnItRemove.Enabled = true;
             btnWRemove.Enabled = true;
+            btnCRemove.Enabled = true;
+            btnShowCyberware.Enabled = true;
             isLoading = false;
             statusText.Text = "Sheet loaded! Happy trails!";
         }

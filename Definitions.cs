@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace CP48
+namespace CP2020
 {
+    public enum LANG
+    {
+        LANG_EN,
+        LANG_ES
+    }
     [JsonConverter(typeof(StringEnumConverter))]
     public enum eGender:int
     {        
@@ -109,7 +114,8 @@ namespace CP48
         Pick_Pocket,
         Play_Instrument,
         Weaponsmith,
-        Other
+        Other,
+        Empty
     }
     public enum eStats
     {
@@ -245,7 +251,7 @@ namespace CP48
     {
         public eStats ID;
         public int Value;
-        public int Remaining;
+        public int Modifier;
     }
     [Serializable]
     public class StatValues
@@ -325,6 +331,13 @@ namespace CP48
             public Weapon weapon;
             public int quantity;
         }
+        [Serializable]
+        public class CyberwareTuple
+        {
+            public Cyberware cyberware;
+            public int quantity;
+            public float humanity;
+        }
         public string Name;
         public eRole Role;
         public int AvailablePoints;
@@ -336,10 +349,14 @@ namespace CP48
         public int Age;
         public List<ItemTuple> Items = new List<ItemTuple>();
         public List<WeaponTuple> Weapons = new List<WeaponTuple>();
+        public List<CyberwareTuple> Cyberware = new List<CyberwareTuple>();
+        public float HumanityLoss = 0.0f;
         public int MaxProfessionalSkillPoints { get { return 40; } }
         public int MaxFreeSkillPoints { get { return Stats.Int.Value + Stats.Ref.Value; } }
+
+        
         public static List<Skill> GetSkillPack(eRole role)
-        {
+        {            
             List<Skill> res = new List<Skill>();
             switch (role)
             {
@@ -355,17 +372,7 @@ namespace CP48
                     Skill i1 = new Skill { ID = eSkill.Athletics };
                     Skill j1 = new Skill { ID = eSkill.Submachine_Gun };
                     Skill k1 = new Skill { ID = eSkill.Steath };
-                    res.Add(a1);
-                    res.Add(b1);
-                    res.Add(c1);
-                    res.Add(d1);
-                    res.Add(e1);
-                    res.Add(f1);
-                    res.Add(g1);
-                    res.Add(h1);
-                    res.Add(i1);
-                    res.Add(j1);
-                    res.Add(k1);
+                    res.Add(a1,b1,c1,d1,e1,f1,g1,h1,i1,j1,k1);
                     return res;
                 case eRole.Rocker:
                     Skill a2 = new Skill { ID = eSkill.Charimatic_Leadership };
@@ -378,16 +385,7 @@ namespace CP48
                     Skill h2 = new Skill { ID = eSkill.Streetwise };
                     Skill i2 = new Skill { ID = eSkill.Persuasion };
                     Skill j2 = new Skill { ID = eSkill.Seduction };
-                    res.Add(a2);
-                    res.Add(b2);
-                    res.Add(c2);
-                    res.Add(d2);
-                    res.Add(e2);
-                    res.Add(f2);
-                    res.Add(g2);
-                    res.Add(h2);
-                    res.Add(i2);
-                    res.Add(j2);
+                    res.Add(a2,b2,c2,d2,e2,f2,g2,h2,i2,j2);
                     return res;
                 case eRole.Netrunner:
                     Skill a3 = new Skill { ID = eSkill.Interface };
@@ -400,16 +398,7 @@ namespace CP48
                     Skill h3 = new Skill { ID = eSkill.Composition };
                     Skill i3 = new Skill { ID = eSkill.Electronics };
                     Skill j3 = new Skill { ID = eSkill.Programming };
-                    res.Add(a3);
-                    res.Add(b3);
-                    res.Add(c3);
-                    res.Add(d3);
-                    res.Add(e3);
-                    res.Add(f3);
-                    res.Add(g3);
-                    res.Add(h3);
-                    res.Add(i3);
-                    res.Add(j3);
+                    res.Add(a3, b3, c3, d3, e3, f3, g3, h3, i3, j3);
                     return res;
                 case eRole.Media:
                     Skill a4 = new Skill { ID = eSkill.Credibility };
@@ -422,16 +411,7 @@ namespace CP48
                     Skill h4 = new Skill { ID = eSkill.Streetwise };
                     Skill i4 = new Skill { ID = eSkill.Photography_Film };
                     Skill j4 = new Skill { ID = eSkill.Interview };
-                    res.Add(a4);
-                    res.Add(b4);
-                    res.Add(c4);
-                    res.Add(d4);
-                    res.Add(e4);
-                    res.Add(f4);
-                    res.Add(g4);
-                    res.Add(h4);
-                    res.Add(i4);
-                    res.Add(j4);
+                    res.Add(a4, b4, c4, d4, e4, f4, g4, h4, i4, j4);
                     return res;
                 case eRole.Nomad:
                     Skill a5 = new Skill { ID = eSkill.Family };
@@ -444,16 +424,7 @@ namespace CP48
                     Skill h5 = new Skill { ID = eSkill.Survival };
                     Skill i5 = new Skill { ID = eSkill.Brawling };
                     Skill j5 = new Skill { ID = eSkill.Athletics };
-                    res.Add(a5);
-                    res.Add(b5);
-                    res.Add(c5);
-                    res.Add(d5);
-                    res.Add(e5);
-                    res.Add(f5);
-                    res.Add(g5);
-                    res.Add(h5);
-                    res.Add(i5);
-                    res.Add(j5);
+                    res.Add(a5, b5, c5, d5, e5, f5, g5, h5, i5, j5);
                     return res;
                 case eRole.Fixer:
                     Skill a6 = new Skill { ID = eSkill.StreetDeal };
@@ -466,16 +437,7 @@ namespace CP48
                     Skill h6 = new Skill { ID = eSkill.Pick_Pocket };
                     Skill i6 = new Skill { ID = eSkill.Intimidate };
                     Skill j6 = new Skill { ID = eSkill.Persuasion };
-                    res.Add(a6);
-                    res.Add(b6);
-                    res.Add(c6);
-                    res.Add(d6);
-                    res.Add(e6);
-                    res.Add(f6);
-                    res.Add(g6);
-                    res.Add(h6);
-                    res.Add(i6);
-                    res.Add(j6);
+                    res.Add(a6, b6, c6, d6, e6, f6, g6, h6, i6, j6);
                     return res;
                 case eRole.Cop:
                     Skill a7 = new Skill { ID = eSkill.Authority };
@@ -488,16 +450,7 @@ namespace CP48
                     Skill h7 = new Skill { ID = eSkill.Melee };
                     Skill i7 = new Skill { ID = eSkill.Interrogation };
                     Skill j7 = new Skill { ID = eSkill.Streetwise };
-                    res.Add(a7);
-                    res.Add(b7);
-                    res.Add(c7);
-                    res.Add(d7);
-                    res.Add(e7);
-                    res.Add(f7);
-                    res.Add(g7);
-                    res.Add(h7);
-                    res.Add(i7);
-                    res.Add(j7);
+                    res.Add(a7, b7, c7, d7, e7, f7, g7, h7, i7, j7);
                     return res;
                 case eRole.Corpo:
                     Skill a8 = new Skill { ID = eSkill.Resources };
@@ -510,16 +463,7 @@ namespace CP48
                     Skill h8 = new Skill { ID = eSkill.Stock_Market };
                     Skill i8 = new Skill { ID = eSkill.Wardrobe };
                     Skill j8 = new Skill { ID = eSkill.Personal_Grooming };
-                    res.Add(a8);
-                    res.Add(b8);
-                    res.Add(c8);
-                    res.Add(d8);
-                    res.Add(e8);
-                    res.Add(f8);
-                    res.Add(g8);
-                    res.Add(h8);
-                    res.Add(i8);
-                    res.Add(j8);
+                    res.Add(a8, b8, c8, d8, e8, f8, g8, h8, i8, j8);
                     return res;
                 case eRole.Techie:
                     Skill a9 = new Skill { ID = eSkill.Jury_Rig };
@@ -533,17 +477,7 @@ namespace CP48
                     Skill i9 = new Skill { ID = eSkill.Gyro_Tech };
                     Skill j9 = new Skill { ID = eSkill.Electronic_Security };
                     Skill k9 = new Skill { ID = eSkill.AeroTech };
-                    res.Add(a9);
-                    res.Add(b9);
-                    res.Add(c9);
-                    res.Add(d9);
-                    res.Add(e9);
-                    res.Add(f9);
-                    res.Add(g9);
-                    res.Add(h9);
-                    res.Add(i9);
-                    res.Add(j9);
-                    res.Add(k9);
+                    res.Add(a9, b9, c9, d9, e9, f9, g9, h9, i9, j9,k9);
                     return res;
                 case eRole.Medtech:
                     Skill a0 = new Skill { ID = eSkill.Medical_Tech };
@@ -556,16 +490,7 @@ namespace CP48
                     Skill h0 = new Skill { ID = eSkill.Pharmaceuticals };
                     Skill i0 = new Skill { ID = eSkill.Zoology };
                     Skill j0 = new Skill { ID = eSkill.Human_Perception };
-                    res.Add(a0);
-                    res.Add(b0);
-                    res.Add(c0);
-                    res.Add(d0);
-                    res.Add(e0);
-                    res.Add(f0);
-                    res.Add(g0);
-                    res.Add(h0);
-                    res.Add(i0);
-                    res.Add(j0);
+                    res.Add(a0, b0, c0, d0, e0, f0, g0, h0, i0, j0);
                     return res;
             }
             return res;
@@ -984,11 +909,10 @@ namespace CP48
                 res = JsonConvert.DeserializeObject<Sheet>(System.IO.File.ReadAllText(pathAndFilename));
                 return res;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-
         }
 
         public void AddItem(Item i, int q = 1)
@@ -1000,9 +924,7 @@ namespace CP48
                 Items.Add(tuple);
             }
             else
-            {
                 t.quantity += q;
-            }
         }        
         public void AddWeapon(Weapon w, int q = 1)
         {
@@ -1013,9 +935,28 @@ namespace CP48
                 Weapons.Add(tuple);
             }
             else
-            {
                 t.quantity += q;
-            }
+        }
+        public void AddCyberware(Cyberware w, float humanity, int q = 1)
+        {
+          //  CyberwareTuple t = Cyberware.Find(x => x.cyberware.Name == w.Name);
+           // if(t == null)
+          //  {
+                CyberwareTuple tuple = new CyberwareTuple() { cyberware = w, quantity = q, humanity = humanity };
+                Cyberware.Add(tuple);
+          //  }
+          //  else
+          //  {
+          //      t.quantity += q;
+          //      t.humanity += humanity;
+          //  }
+            HumanityLoss += humanity;
+            UpdateHumanity();
+        }
+        public void UpdateHumanity()
+        {
+            int lossvalue = (int)Math.Floor(HumanityLoss * 0.1f);
+            Stats.Emp.Modifier = lossvalue;
         }
     }
 }

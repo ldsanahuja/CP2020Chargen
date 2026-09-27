@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CP48
+namespace CP2020
 {
     public partial class RollForm : Form
     {

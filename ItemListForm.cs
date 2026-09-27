@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CP48
+namespace CP2020
 {
     public partial class ItemListForm : Form
     {
@@ -83,6 +83,48 @@ namespace CP48
             tvItems.Nodes.AddRange(mainNodes.ToArray());
             tvItems.NodeMouseDoubleClick += TvItems_NodeMouseDoubleClick_Weapon;
         }
+        public void InitializeCyberwareWindow(MainForm mainForm)
+        {
+            this.main = mainForm;
+            this.Text = "Cyberware Database";
+            Point loc = this.Location;
+            loc.X = main.Location.X + main.Width + this.Width;
+            loc.Y = main.Location.Y;
+            this.Location = loc;
+            List<string> itemcats = System.Enum.GetNames(typeof(CyberwareCategory)).ToList();
+            for (int x = 0; x < itemcats.Count; x++)
+            {
+                TreeNode maincat = new TreeNode(itemcats[x]);
+                List<TreeNode> subitems = new List<TreeNode>();
+                foreach (Cyberware i in EquipmentManager.DB.Cyberwares)
+                {
+                    if (itemcats[x].Equals(i.Category.ToString()))
+                    {
+                        TreeNode ni = new TreeNode(i.Name + " | " + i.Price + "$");
+                        string tooltip = "Surgery: " + i.Surgery + " | " + i.Description + " | ";
+                        if (i is Cyberware_D6 d6cyberware)
+                        {
+                            tooltip += "Humanity: ";
+                            tooltip += d6cyberware.DiceString;
+                        }
+                        else
+                        {
+                            tooltip += "Humanity: " + i.Humanity.ToString("0.0");
+                        }
+                        //string tooltip = "WA: " + i.WA + " Co: " + i.Concealability + " Dam: " + i.DamageAndAmmo + " Shots: " + i.Shots + "/" + i.RoF;
+                        ni.ToolTipText = tooltip;
+                        subitems.Add(ni);
+                    }
+                }
+                if (subitems.Count > 0)
+                {
+                    maincat.Nodes.AddRange(subitems.ToArray());
+                }
+                mainNodes.Add(maincat);
+            }
+            tvItems.Nodes.AddRange(mainNodes.ToArray());
+            tvItems.NodeMouseDoubleClick += TvItems_NodeMouseDoubleClick_CWare;
+        }
 
         private void TvItems_NodeMouseDoubleClick_Item(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -104,6 +146,15 @@ namespace CP48
                 main.AddWeapon(t);
             }
         }
-
+        private void TvItems_NodeMouseDoubleClick_CWare(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string realname = e.Node.Text.Split(cutChar.ToCharArray())[0];
+            realname = realname.Substring(0, realname.Length - 1);
+            Cyberware t = EquipmentManager.DB.Cyberwares.Find(x => x.Name == realname);
+            if (t != null)
+            {
+                main.AddCyberware(t);
+            }
+        }
     }
 }

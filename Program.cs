@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CP48
+namespace CP2020
 {
     static class Program
     {
@@ -17,6 +17,16 @@ namespace CP48
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+        }
+    }
+    static class ListExtensions
+    {
+        static public void Add<T>(this List<T> list, params T[] additions)
+        {
+            foreach (T addition in additions)
+            {
+                list.Add(addition);
+            }
         }
     }
 }

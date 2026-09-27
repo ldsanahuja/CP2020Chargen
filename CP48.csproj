@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{448F7EBC-6F01-414A-844D-7581680581CF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CP48</RootNamespace>
+    <RootNamespace>CP2020</RootNamespace>
     <AssemblyName>CP2020Chargen</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CP48.Program</StartupObject>
+    <StartupObject>CP2020.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>CPChargen.ico</ApplicationIcon>
@@ -190,11 +190,21 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RollForm.resx">
       <DependentUpon>RollForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\CSheet.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Cyberware.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Items.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Weapons.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
@@ -214,12 +224,6 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="CPChargen.ico" />
-    <Content Include="Data\Items.XML">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\Weapons.XML">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
