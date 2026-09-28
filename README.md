@@ -11,6 +11,12 @@ A small tool to generate your Pen&Papel Cyberpunk 2020 Characters
  - Can be Saved/Loaded in XML format, allowing editing by hand if
    necessary
 
+<b>Why?</b>
+Because I could not find a generator/helper that follows book rules precisely and could export, using the original sheet, to ES version (Which this does)
+
+<b>But the original character sheet is... well...</b>
+What can I say? Nostalgia's a b***h
+
 Written in C#, .NET 4.8. Uses [iText](https://github.com/itext/itext-dotnet) and [Newtonsoft’s JSON](https://www.newtonsoft.com/json)
 
 Contains names or references to products property of [R. Talsorian Games](https://rtalsoriangames.com/) and [Mike Pondsmith](https://rtalsoriangames.com/the-r-talsorian-crew/). This software uses it under fair usage, and no economic gain will be allowed in using this tool. Any content is compliant with Homebrew Content Policy of R. Talsorian Games
