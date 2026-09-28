@@ -474,7 +474,7 @@ namespace CP2020
         }
         private void pDFCharacterSheetESToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
+            
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "pdf files(*.pdf) | *.pdf";
             sfd.RestoreDirectory = true;
@@ -482,8 +482,7 @@ namespace CP2020
             {
                 PDFExport.ExportToPDF(CurrentSheet, sfd.FileName, LANG.LANG_ES);
             }
-            */
-            MessageBox.Show("Not yet implemented");
+            
         }
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {

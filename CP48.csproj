@@ -158,6 +158,7 @@
     <Compile Include="ItemListForm.Designer.cs">
       <DependentUpon>ItemListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Localization.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +197,9 @@
       <DependentUpon>RollForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\CSheet.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\CSheet_ES.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Data\Cyberware.json" />

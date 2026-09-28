@@ -32,11 +32,14 @@ namespace CP2020
         Medical_Tech,
         Resources,
         StreetDeal,
+
         Personal_Grooming,
         Wardrobe,
+
         Endurance,
         Strength_Feat,
         Swimming,
+
         Interrogation,
         Intimidate,
         Oratory,
@@ -49,6 +52,7 @@ namespace CP2020
         Social,
         Persuasion,
         Perform,
+
         Accounting,
         Anthropology,
         Awareness_Notice,
@@ -74,6 +78,7 @@ namespace CP2020
         Teaching,
         Survival,
         Zoology,
+
         Archery,
         Athletics,
         Brawling,
@@ -94,6 +99,7 @@ namespace CP2020
         Rifle,
         Steath,
         Submachine_Gun,
+
         AeroTech,
         AVTech,
         Basic_Tech,
