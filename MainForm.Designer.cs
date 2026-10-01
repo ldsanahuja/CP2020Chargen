@@ -112,6 +112,9 @@ namespace CP2020
             this.btnShowCyberware = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.tbHumLoss = new System.Windows.Forms.TextBox();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rebuildDatabasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ignoreMoneyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
@@ -125,6 +128,7 @@ namespace CP2020
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.expotToolStripMenuItem,
+            this.settingsToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -859,6 +863,28 @@ namespace CP2020
             this.tbHumLoss.Size = new System.Drawing.Size(45, 20);
             this.tbHumLoss.TabIndex = 62;
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rebuildDatabasesToolStripMenuItem,
+            this.ignoreMoneyToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "&Settings";
+            // 
+            // rebuildDatabasesToolStripMenuItem
+            // 
+            this.rebuildDatabasesToolStripMenuItem.Name = "rebuildDatabasesToolStripMenuItem";
+            this.rebuildDatabasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rebuildDatabasesToolStripMenuItem.Text = "&Rebuild Databases";
+            this.rebuildDatabasesToolStripMenuItem.Click += new System.EventHandler(this.rebuildDatabasesToolStripMenuItem_Click);
+            // 
+            // ignoreMoneyToolStripMenuItem
+            // 
+            this.ignoreMoneyToolStripMenuItem.Name = "ignoreMoneyToolStripMenuItem";
+            this.ignoreMoneyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ignoreMoneyToolStripMenuItem.Text = "&Ignore money";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1027,6 +1053,9 @@ namespace CP2020
         private System.Windows.Forms.Button btnShowCyberware;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox tbHumLoss;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rebuildDatabasesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ignoreMoneyToolStripMenuItem;
     }
 }
 

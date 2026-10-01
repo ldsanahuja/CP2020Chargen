@@ -166,6 +166,7 @@ namespace CP2020
                     form.GetField("WeaponRel" + slot).SetValue(character.Weapons[x].weapon.Reliability);
                 }
                 int cybercost = 0;
+                
                 for(int x = 0; x < character.Cyberware.Count; x++)
                 {
                     form.GetField("CWare" + (x + 1).ToString()).SetValue(character.Cyberware[x].cyberware.Name);

@@ -12,14 +12,23 @@ namespace CP2020
 {
     public partial class ItemListForm : Form
     {
+        private enum eItemListType
+        {
+            NONE,
+            ITEMS,
+            WEAPONS,
+            CWARE
+        }
         private MainForm main;
         private string cutChar = "|";
+        private eItemListType windowStyle = eItemListType.NONE;
         public ItemListForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
         private List<TreeNode> mainNodes = new List<TreeNode>();
         private List<TreeNode> childNodes = new List<TreeNode>();
+
         public void InitializeItemWindow(MainForm mainForm)
         {
             this.main = mainForm;
@@ -49,6 +58,7 @@ namespace CP2020
             }
             tvItems.Nodes.AddRange(mainNodes.ToArray());
             tvItems.NodeMouseDoubleClick += TvItems_NodeMouseDoubleClick_Item;
+            windowStyle = eItemListType.ITEMS;
 
         }
         public void InitializeWeaponWindow(MainForm mainForm)
@@ -82,6 +92,7 @@ namespace CP2020
             }
             tvItems.Nodes.AddRange(mainNodes.ToArray());
             tvItems.NodeMouseDoubleClick += TvItems_NodeMouseDoubleClick_Weapon;
+            windowStyle = eItemListType.WEAPONS;
         }
         public void InitializeCyberwareWindow(MainForm mainForm)
         {
@@ -101,7 +112,7 @@ namespace CP2020
                     if (itemcats[x].Equals(i.Category.ToString()))
                     {
                         TreeNode ni = new TreeNode(i.Name + " | " + i.Price + "$");
-                        string tooltip = "Surgery: " + i.Surgery + " | " + i.Description + " | ";
+                        string tooltip = "Surgery: " + i.Surgery + " | ";
                         if (i is Cyberware_D6 d6cyberware)
                         {
                             tooltip += "Humanity: ";
@@ -111,6 +122,7 @@ namespace CP2020
                         {
                             tooltip += "Humanity: " + i.Humanity.ToString("0.0");
                         }
+                        tooltip += " | " + i.Description;
                         //string tooltip = "WA: " + i.WA + " Co: " + i.Concealability + " Dam: " + i.DamageAndAmmo + " Shots: " + i.Shots + "/" + i.RoF;
                         ni.ToolTipText = tooltip;
                         subitems.Add(ni);
@@ -124,8 +136,9 @@ namespace CP2020
             }
             tvItems.Nodes.AddRange(mainNodes.ToArray());
             tvItems.NodeMouseDoubleClick += TvItems_NodeMouseDoubleClick_CWare;
+            windowStyle = eItemListType.CWARE;
         }
-
+        
         private void TvItems_NodeMouseDoubleClick_Item(object sender, TreeNodeMouseClickEventArgs e)
         {
             string realname = e.Node.Text.Split(cutChar.ToCharArray())[0];
@@ -155,6 +168,29 @@ namespace CP2020
             {
                 main.AddCyberware(t);
             }
+        }
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            /*
+            switch (windowStyle)
+            {
+                case eItemListType.NONE:
+                    break;
+                case eItemListType.ITEMS:
+                    tvItems.Nodes.Clear();
+                    InitializeItemWindow(main);
+                    break;
+                case eItemListType.WEAPONS:
+                    tvItems.Nodes.Clear();
+                    InitializeWeaponWindow(main);
+                    break;
+                case eItemListType.CWARE:
+                    tvItems.Nodes.Clear();
+                    InitializeCyberwareWindow(main);
+                    break;
+            }
+            */
         }
     }
 }

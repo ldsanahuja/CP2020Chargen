@@ -32,6 +32,17 @@ namespace CP2020
         public MainForm()
         {
             InitializeComponent();
+            if (!System.IO.File.Exists(EquipmentManager.cyberwareXML))
+                MessageBox.Show("Could not find Cyberware files: " + EquipmentManager.cyberwareXML + " . \n Cyberware will not be available");
+            if (!System.IO.File.Exists(EquipmentManager.itemsXML))
+                MessageBox.Show("Could not find Item files: " + EquipmentManager.itemsXML + " . \n May cause problems.");
+            if (!System.IO.File.Exists(EquipmentManager.weaponsXML))
+                MessageBox.Show("Could not find Weapons files: " + EquipmentManager.weaponsXML + " . \n May cause problems.");
+            if (!System.IO.File.Exists(PDFExport.BaseFileEn))
+                MessageBox.Show("Missing Character Sheet PDF: " + PDFExport.BaseFileEn + " . \n Exporting will be disabled.");
+            if (!System.IO.File.Exists(PDFExport.BaseFileEs))
+                MessageBox.Show("Missing Spanish Character Sheet PDF: " + PDFExport.BaseFileEs + " . \n Exporting will be disabled.");
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -497,7 +508,18 @@ namespace CP2020
             }
             statusText.Text = "File saved correctly";
         }
-
+        private void rebuildDatabasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Rebuilding will take away any customization. Are you sure?", "Are you sure?", MessageBoxButtons.YesNo);
+            if (dlg == DialogResult.Yes)
+            {
+                EquipmentManager.CreateItems();
+                EquipmentManager.CreateCyberware();
+                EquipmentManager.CreateWeapons();
+                EquipmentManager.Reload();
+                MessageBox.Show("Done!");
+            }
+        }
         #endregion
         private void SetBaseInformation()
         {
@@ -592,6 +614,27 @@ namespace CP2020
             tbHumLoss.Text = CurrentSheet.HumanityLoss.ToString("00");
             hasChangesPending = true;
         }
+        private void SetBaseFields()
+        {
+            if (isLoading)
+                return;
+
+
+            tbINT.Text = CurrentSheet.Stats.Int.Value.ToString();
+            tbREF.Text = CurrentSheet.Stats.Ref.Value.ToString();
+            tbMODREF.Text = Math.Abs(CurrentSheet.Stats.Ref.Value - CurrentSheet.Stats.Ref.Modifier).ToString();
+            tbTECH.Text = CurrentSheet.Stats.Tech.Value.ToString();
+            tbCOOL.Text = CurrentSheet.Stats.Cool.Value.ToString();
+            tbATTR.Text = CurrentSheet.Stats.Attr.Value.ToString();
+            tbCOOL.Text = CurrentSheet.Stats.Cool.Value.ToString();
+            tbMA.Text = CurrentSheet.Stats.MA.Value.ToString();
+            tbBODY.Text = CurrentSheet.Stats.Body.Value.ToString();
+            tbEMP.Text = CurrentSheet.Stats.Emp.Value.ToString();
+            tbMODEMP.Text = Math.Abs(CurrentSheet.Stats.Emp.Value - CurrentSheet.Stats.Emp.Modifier).ToString();
+
+            hasChangesPending = true;
+        }
+
         public void AddItem(Item i)
         {
             if (CurrentSheet.InitialFunds < i.Price && UseMoney)
@@ -688,11 +731,29 @@ namespace CP2020
             float humanityloss = w.Humanity;
             if (w is Cyberware_D6 d6c)
                 humanityloss = d6c.Humanity;
+            if(w.Max > 0)
+            {
+                List<Sheet.CyberwareTuple> found = CurrentSheet.Cyberware.FindAll(x => x.cyberware.Name == w.Name);
+                if(found == null || found.Count > w.Max)
+                {
+                    statusText.Text = "This cyberware does not allow more than " + w.Max + " implants.";
+                        return;
+                }
 
+            }
             if(Math.Abs(CurrentSheet.Stats.Emp.Modifier - CurrentSheet.Stats.Emp.Value) <= 1)
             {
                 statusText.Text = "Can't add more Cyberware with your current Empathy";
                 return;
+            }
+            if(!string.IsNullOrEmpty(w.Incompat))
+            {
+                int foundindex = CurrentSheet.Cyberware.FindIndex(x => x.cyberware.Name == w.Incompat);
+                if (foundindex != -1)
+                {
+                    statusText.Text = "This cyberware is incompatible with: " + w.Incompat;
+                    return;
+                }
             }
             if(!String.IsNullOrEmpty(w.Requires))
             {
@@ -726,7 +787,7 @@ namespace CP2020
 
             CurrentSheet.AddCyberware(w,  humanityloss,1);
             tbFunds.Text = CurrentSheet.InitialFunds.ToString();
-            SetBaseInformation();
+            SetBaseFields();
             hasChangesPending = true;
             statusText.Text = "Added Cyberware " + w.Name;
         }

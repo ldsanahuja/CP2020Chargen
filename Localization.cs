@@ -24,11 +24,11 @@ namespace CP2020
                 case "Techscanner" : return "Escáner tecnológico";
                 case "Cutting Torch" : return "Soplete";
                 case "Tech Toolkit" : return "Kit de herramientas";
-                case "B&E Tools" : return "Herramientas de allanamiento";
+                case "B&E Tools" : return "Herramientas de Ladrón";
                 case "Electronic Toolkit" : return "Kit de herramientas electrónicas";
                 case "Protective Googles" : return "Gafas protectoras";
                 case "Flashtube" : return "Linterna";
-                case "Glowstick" : return "Barra luminosa";
+                case "Glowstick" : return "Bastón Luminoso";
                 case "Paint, ltr" : return "Pintura, litro";
                 case "Flash Tape, mtr" : return "Cinta reflectante, metro";
                 case "Rope, mtr" : return "Cuerda, metro";
@@ -45,9 +45,9 @@ namespace CP2020
                 case "Pocket TV" : return "Televisor de bolsillo";
                 case "Digital Chip Player" : return "Reproductor de chips digitales";
                 case "Digital Music Chip" : return "Chip de música digital";
-                case "Electric Guitar" : return "Guitarra eléctrica";
-                case "Electric Keyboard" : return "Teclado eléctrico";
-                case "Drum Synth" : return "Sintetizador de batería";
+                case "Electric Guitar" : return "Guitarra Eléctrica";
+                case "Electric Keyboard" : return "Teclado Electrónico";
+                case "Drum Synth" : return "Sintetizador de Percusión";
                 case "Amplifier" : return "Amplificador";
 
                 case "Ammo, Light Pistol/SMG (100)" : return "Munición, pistola lig/subfusil (100)";
@@ -91,9 +91,9 @@ namespace CP2020
 
                 case "Binoglasses" : return "Binogafas";
                 case "Binoculars" : return "Prismáticos";
-                case "Light Booster Googles" : return "Gafas amplificadoras de luz";
-                case "IR Googles" : return "Gafas infrarrojas";
-                case "IR Flash" : return "Flash infrarrojo";
+                case "Light Booster Googles" : return "Gafas de Visión Nocturna";
+                case "IR Googles" : return "Gafas IR";
+                case "IR/UV Flash" : return "Linterna IR/UV";
 
                 case "Movie" : return "Cine";
                 case "Chip Rental" : return "Alquiler de chip";
@@ -104,7 +104,7 @@ namespace CP2020
                 case "Keylock, per Level" : return "Cerradura de llave, por nivel";
                 case "Cardlock, per level" : return "Cerradura de tarjeta, por nivel";
                 case "Vocolock, per level" : return "Cerradura de voz, por nivel";
-                case "Line Tap Bug" : return "Dispositivo de escucha de línea";
+                case "Line Tap Bug" : return "Pinchalíneas";
                 case "Code Decryptor" : return "Descifrador de códigos";
                 case "Voc Decryptor" : return "Descifrador de voz";
                 case "Security Scanner" : return "Escáner de seguridad";
@@ -116,8 +116,8 @@ namespace CP2020
                 case "Tracking Device" : return "Dispositivo de seguimiento";
                 case "Tracer Button" : return "Botón rastreador";
                 case "Remote Sensors" : return "Sensores remotos";
-                case "PlasKuffs" : return "PlasEsposas";
-                case "Stripwire Binders" : return "Bridas de alambre";
+                case "PlasKuffs" : return "Esposas de Nylon";
+                case "Stripwire Binders" : return "Bandas Adhesivas";
 
                 case "Dermal Stapler" : return "Grapadora dérmica";
                 case "Spray Skin, per can" : return "Piel en aerosol, lata";
@@ -127,7 +127,7 @@ namespace CP2020
                 case "First Aid Kit" : return "Botiquín de primeros auxilios";
                 case "Medscanner" : return "Escáner médico";
                 case "Drug Analyser" : return "Analizador de drogas";
-                case "Airhypo" : return "Jeringa hipodérmica";
+                case "Airhypo" : return "Jeringa de Aire Comprimido";
 
                 case "Nylon Carrybag" : return "Bolsa de transporte de nailon";
                 case "Sleeping Bag" : return "Saco de dormir";
@@ -162,7 +162,7 @@ namespace CP2020
                 case "Trauma Team Acct, Month" : return "Cuenta de Trauma Team, mes";
                 case "Cable TV" : return "Televisión por cable";
 
-                case "Kibble, per Week" : return "Kibble, por semana";
+                case "Kibble, per Week" : return "Friskies, por semana";
                 case "Basic Prepak, per Week" : return "Comida precocinada básica, por semana";
                 case "Good Prepak, per Week" : return "Comida precocinada buena, por semana";
                 case "Fresh Food, per Week" : return "Comida fresca, por semana";

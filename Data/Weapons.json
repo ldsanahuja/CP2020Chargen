@@ -16,6 +16,7 @@
       "RoF": "2",
       "Reliability": "ST",
       "Range": "50m",
+      "Smart": false,
       "Price": 75,
       "DamageAndAmmo": "1D6(5mm)",
       "CategoryString": "P"
@@ -34,6 +35,7 @@
       "RoF": "2",
       "Reliability": "UR",
       "Range": "50m",
+      "Smart": false,
       "Price": 50,
       "DamageAndAmmo": "1D6+1(6mm)",
       "CategoryString": "P"
@@ -52,6 +54,7 @@
       "RoF": "2",
       "Reliability": "ST",
       "Range": "50m",
+      "Smart": false,
       "Price": 150,
       "DamageAndAmmo": "1D6+1(6mm)",
       "CategoryString": "P"
@@ -70,6 +73,7 @@
       "RoF": "2",
       "Reliability": "VR",
       "Range": "50m",
+      "Smart": false,
       "Price": 250,
       "DamageAndAmmo": "2D6+1(9mm)",
       "CategoryString": "MP"
@@ -88,6 +92,7 @@
       "RoF": "2",
       "Reliability": "UR",
       "Range": "50m",
+      "Smart": false,
       "Price": 250,
       "DamageAndAmmo": "2D6+3(10mm)",
       "CategoryString": "MP"
@@ -106,6 +111,7 @@
       "RoF": "2",
       "Reliability": "ST",
       "Range": "50m",
+      "Smart": false,
       "Price": 300,
       "DamageAndAmmo": "2D6+1(9mm)",
       "CategoryString": "MP"
@@ -124,6 +130,7 @@
       "RoF": "2",
       "Reliability": "UR",
       "Range": "50m",
+      "Smart": false,
       "Price": 350,
       "DamageAndAmmo": "3D6(11mm)",
       "CategoryString": "HP"
@@ -142,6 +149,7 @@
       "RoF": "2",
       "Reliability": "VR",
       "Range": "50m",
+      "Smart": false,
       "Price": 400,
       "DamageAndAmmo": "3D6(11mm)",
       "CategoryString": "HP"
@@ -160,6 +168,7 @@
       "RoF": "1",
       "Reliability": "ST",
       "Range": "50m",
+      "Smart": false,
       "Price": 450,
       "DamageAndAmmo": "4D6+1(12mm)",
       "CategoryString": "VHP"
@@ -178,6 +187,7 @@
       "RoF": "1",
       "Reliability": "VR",
       "Range": "50m",
+      "Smart": false,
       "Price": 500,
       "DamageAndAmmo": "4D6+1(12mm)",
       "CategoryString": "VHP"
@@ -196,6 +206,7 @@
       "RoF": "35",
       "Reliability": "VR",
       "Range": "150m",
+      "Smart": false,
       "Price": 475,
       "DamageAndAmmo": "2D6+1(9mm)",
       "CategoryString": "SMG"
@@ -214,6 +225,7 @@
       "RoF": "32",
       "Reliability": "ST",
       "Range": "150m",
+      "Smart": false,
       "Price": 450,
       "DamageAndAmmo": "2D6+3(10mm)",
       "CategoryString": "SMG"
@@ -232,6 +244,7 @@
       "RoF": "25",
       "Reliability": "ST",
       "Range": "150m",
+      "Smart": false,
       "Price": 400,
       "DamageAndAmmo": "1D6+1(6mm)",
       "CategoryString": "SMG"
@@ -250,6 +263,7 @@
       "RoF": "20",
       "Reliability": "VR",
       "Range": "200m",
+      "Smart": false,
       "Price": 500,
       "DamageAndAmmo": "2D6+3(10mm)",
       "CategoryString": "MSMG"
@@ -268,6 +282,7 @@
       "RoF": "25",
       "Reliability": "ST",
       "Range": "200m",
+      "Smart": false,
       "Price": 520,
       "DamageAndAmmo": "2D6+1(9mm)",
       "CategoryString": "MSMG"
@@ -286,6 +301,7 @@
       "RoF": "15",
       "Reliability": "VR",
       "Range": "200m",
+      "Smart": false,
       "Price": 500,
       "DamageAndAmmo": "3D6(11mm)",
       "CategoryString": "HSMG"
@@ -304,6 +320,7 @@
       "RoF": "20",
       "Reliability": "ST",
       "Range": "200m",
+      "Smart": false,
       "Price": 700,
       "DamageAndAmmo": "4D6+1(12mm)",
       "CategoryString": "HSMG"
@@ -322,6 +339,7 @@
       "RoF": "10",
       "Reliability": "ST",
       "Range": "200m",
+      "Smart": false,
       "Price": 650,
       "DamageAndAmmo": "4D6+1(12mm)",
       "CategoryString": "HSMG"
@@ -340,6 +358,7 @@
       "RoF": "30",
       "Reliability": "VR",
       "Range": "400m",
+      "Smart": false,
       "Price": 450,
       "DamageAndAmmo": "5D6(5.56)",
       "CategoryString": "RIF"
@@ -358,6 +377,7 @@
       "RoF": "30",
       "Reliability": "ST",
       "Range": "400m",
+      "Smart": false,
       "Price": 500,
       "DamageAndAmmo": "5D6(5.56)",
       "CategoryString": "RIF"
@@ -376,6 +396,7 @@
       "RoF": "30",
       "Reliability": "VR",
       "Range": "400m",
+      "Smart": false,
       "Price": 600,
       "DamageAndAmmo": "6D6+2(7.62)",
       "CategoryString": "RIF"
@@ -394,6 +415,7 @@
       "RoF": "25",
       "Reliability": "ST",
       "Range": "400m",
+      "Smart": false,
       "Price": 550,
       "DamageAndAmmo": "6D6+2(7.62)",
       "CategoryString": "RIF"
@@ -412,6 +434,7 @@
       "RoF": "10",
       "Reliability": "ST",
       "Range": "50m",
+      "Smart": false,
       "Price": 900,
       "DamageAndAmmo": "4D6(00)",
       "CategoryString": "SHT"
@@ -430,6 +453,7 @@
       "RoF": "2",
       "Reliability": "ST",
       "Range": "50m",
+      "Smart": false,
       "Price": 450,
       "DamageAndAmmo": "4D6(00)",
       "CategoryString": "SHT"

@@ -12,376 +12,369 @@
     {
       "$id": "3",
       "$type": "CP2020.Item, CP2020Chargen",
-      "Name": "Top (Generic)",
-      "Type": 3,
-      "Price": 15
-    },
-    {
-      "$id": "4",
-      "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Jacket (Generic)",
       "Type": 3,
       "Price": 35
     },
     {
-      "$id": "5",
+      "$id": "4",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Footwear (Generic)",
       "Type": 3,
       "Price": 25
     },
     {
-      "$id": "6",
+      "$id": "5",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Jewelry (Generic)",
       "Type": 3,
       "Price": 50
     },
     {
-      "$id": "7",
+      "$id": "6",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Mirrorshades (Generic)",
       "Type": 3,
       "Price": 25
     },
     {
-      "$id": "8",
+      "$id": "7",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Contact Lenses (Generic)",
       "Type": 3,
       "Price": 100
     },
     {
-      "$id": "9",
+      "$id": "8",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Glasses (Generic)",
       "Type": 3,
       "Price": 50
     },
     {
-      "$id": "10",
+      "$id": "9",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Techscanner",
       "Type": 4,
       "Price": 600
     },
     {
-      "$id": "11",
+      "$id": "10",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cutting Torch",
       "Type": 4,
       "Price": 40
     },
     {
-      "$id": "12",
+      "$id": "11",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Tech Toolkit",
       "Type": 4,
       "Price": 100
     },
     {
-      "$id": "13",
+      "$id": "12",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "B&E Tools",
       "Type": 4,
       "Price": 120
     },
     {
-      "$id": "14",
+      "$id": "13",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Electronic Toolkit",
       "Type": 4,
       "Price": 100
     },
     {
-      "$id": "15",
+      "$id": "14",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Protective Googles",
       "Type": 4,
       "Price": 20
     },
     {
-      "$id": "16",
+      "$id": "15",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Flashtube",
       "Type": 4,
       "Price": 2
     },
     {
-      "$id": "17",
+      "$id": "16",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Glowstick",
       "Type": 4,
       "Price": 1
     },
     {
-      "$id": "18",
+      "$id": "17",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Paint, ltr",
       "Type": 4,
       "Price": 10
     },
     {
-      "$id": "19",
+      "$id": "18",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Flash Tape, mtr",
       "Type": 4,
       "Price": 10
     },
     {
-      "$id": "20",
+      "$id": "19",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Rope, mtr",
       "Type": 4,
       "Price": 2
     },
     {
-      "$id": "21",
+      "$id": "20",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Breathing Mask",
       "Type": 4,
       "Price": 30
     },
     {
-      "$id": "22",
+      "$id": "21",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Video Board, mtr2",
       "Type": 5,
       "Price": 100
     },
     {
-      "$id": "23",
+      "$id": "22",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Data Chip",
       "Type": 5,
       "Price": 10
     },
     {
-      "$id": "24",
+      "$id": "23",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Logcompass",
       "Type": 5,
       "Price": 50
     },
     {
-      "$id": "25",
+      "$id": "24",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Digital Recorder",
       "Type": 5,
       "Price": 300
     },
     {
-      "$id": "26",
+      "$id": "25",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Digital Camera",
       "Type": 5,
       "Price": 150
     },
     {
-      "$id": "27",
+      "$id": "26",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "VideoCam",
       "Type": 5,
       "Price": 800
     },
     {
-      "$id": "28",
+      "$id": "27",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "V/A Tape Player",
       "Type": 5,
       "Price": 40
     },
     {
-      "$id": "29",
+      "$id": "28",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Videotape",
       "Type": 5,
       "Price": 4
     },
     {
-      "$id": "30",
+      "$id": "29",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Pocket TV",
       "Type": 5,
       "Price": 80
     },
     {
-      "$id": "31",
+      "$id": "30",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Digital Chip Player",
       "Type": 5,
       "Price": 150
     },
     {
-      "$id": "32",
+      "$id": "31",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Digital Music Chip",
       "Type": 5,
       "Price": 20
     },
     {
-      "$id": "33",
+      "$id": "32",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Electric Guitar",
       "Type": 5,
       "Price": 250
     },
     {
-      "$id": "34",
+      "$id": "33",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Electric Keyboard",
       "Type": 5,
       "Price": 700
     },
     {
-      "$id": "35",
+      "$id": "34",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Drum Synth",
       "Type": 5,
       "Price": 600
     },
     {
-      "$id": "36",
+      "$id": "35",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Amplifier",
       "Type": 5,
       "Price": 750
     },
     {
-      "$id": "37",
+      "$id": "36",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Light Pistol/SMG (100)",
       "Type": 0,
       "Price": 15
     },
     {
-      "$id": "38",
+      "$id": "37",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Medium Pistol/SMG (50)",
       "Type": 0,
       "Price": 15
     },
     {
-      "$id": "39",
+      "$id": "38",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Heavy Pistol/SMG (50)",
       "Type": 0,
       "Price": 18
     },
     {
-      "$id": "40",
+      "$id": "39",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Very Heavy Pistol (50)",
       "Type": 0,
       "Price": 20
     },
     {
-      "$id": "41",
+      "$id": "40",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Assault Rifle (100)",
       "Type": 0,
       "Price": 40
     },
     {
-      "$id": "42",
+      "$id": "41",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Shotgun (12)",
       "Type": 0,
       "Price": 15
     },
     {
-      "$id": "43",
+      "$id": "42",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, 20mm round (1)",
       "Type": 0,
       "Price": 25
     },
     {
-      "$id": "44",
+      "$id": "43",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Std. Arrows (12)",
       "Type": 0,
       "Price": 24
     },
     {
-      "$id": "45",
+      "$id": "44",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Std. Crossbow bolts (12)",
       "Type": 0,
       "Price": 30
     },
     {
-      "$id": "46",
+      "$id": "45",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Airgun pellets (100)",
       "Type": 0,
       "Price": 6
     },
     {
-      "$id": "47",
+      "$id": "46",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Needlegun rounds (50)",
       "Type": 0,
       "Price": 25
     },
     {
-      "$id": "48",
+      "$id": "47",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Flamethrower (1)",
       "Type": 0,
       "Price": 50
     },
     {
-      "$id": "49",
+      "$id": "48",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Std. Micro Missile (4)",
       "Type": 0,
       "Price": 100
     },
     {
-      "$id": "50",
+      "$id": "49",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, AP Light Pistol/SMG (100)",
       "Type": 0,
       "Price": 45
     },
     {
-      "$id": "51",
+      "$id": "50",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Ammo, Needlegun rounds, acid/drug (50)",
       "Type": 0,
       "Price": 125
     },
     {
-      "$id": "52",
+      "$id": "51",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Silencer",
       "Type": 1,
       "Price": 100
     },
     {
-      "$id": "53",
+      "$id": "52",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Holster, any",
       "Type": 1,
       "Price": 20
     },
     {
-      "$id": "54",
+      "$id": "53",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Shoulder sling",
       "Type": 1,
       "Price": 5
     },
     {
-      "$id": "55",
+      "$id": "54",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Pistol Laser Pointer (+1WA)",
       "Type": 1,
       "Price": 100
     },
     {
-      "$id": "56",
+      "$id": "55",
       "$type": "CP2020.Armor, CP2020Chargen",
       "Head": 0,
       "Torso": 4,
@@ -394,7 +387,7 @@
       "Price": 50
     },
     {
-      "$id": "57",
+      "$id": "56",
       "$type": "CP2020.Armor, CP2020Chargen",
       "Head": 0,
       "Torso": 0,
@@ -407,7 +400,7 @@
       "Price": 50
     },
     {
-      "$id": "58",
+      "$id": "57",
       "$type": "CP2020.Armor, CP2020Chargen",
       "Head": 0,
       "Torso": 10,
@@ -420,7 +413,72 @@
       "Price": 90
     },
     {
+      "$id": "58",
+      "$type": "CP2020.Armor, CP2020Chargen",
+      "Head": 14,
+      "Torso": 0,
+      "Arms": 0,
+      "Legs": 0,
+      "EV": 0,
+      "IsHard": true,
+      "Name": "Steel Helmet",
+      "Type": 2,
+      "Price": 20
+    },
+    {
       "$id": "59",
+      "$type": "CP2020.Armor, CP2020Chargen",
+      "Head": 0,
+      "Torso": 14,
+      "Arms": 14,
+      "Legs": 0,
+      "EV": 0,
+      "IsHard": false,
+      "Name": "Light Armor Jacket",
+      "Type": 2,
+      "Price": 150
+    },
+    {
+      "$id": "60",
+      "$type": "CP2020.Armor, CP2020Chargen",
+      "Head": 0,
+      "Torso": 18,
+      "Arms": 18,
+      "Legs": 0,
+      "EV": 1,
+      "IsHard": false,
+      "Name": "Medium Armor Jacket",
+      "Type": 2,
+      "Price": 200
+    },
+    {
+      "$id": "61",
+      "$type": "CP2020.Armor, CP2020Chargen",
+      "Head": 0,
+      "Torso": 20,
+      "Arms": 0,
+      "Legs": 0,
+      "EV": 1,
+      "IsHard": true,
+      "Name": "Flak Vest",
+      "Type": 2,
+      "Price": 200
+    },
+    {
+      "$id": "62",
+      "$type": "CP2020.Armor, CP2020Chargen",
+      "Head": 0,
+      "Torso": 0,
+      "Arms": 0,
+      "Legs": 20,
+      "EV": 1,
+      "IsHard": true,
+      "Name": "Flak Pants",
+      "Type": 2,
+      "Price": 200
+    },
+    {
+      "$id": "63",
       "$type": "CP2020.Armor, CP2020Chargen",
       "Head": 25,
       "Torso": 25,
@@ -433,567 +491,567 @@
       "Price": 600
     },
     {
-      "$id": "60",
+      "$id": "64",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Laptop",
       "Type": 6,
       "Price": 900
     },
     {
-      "$id": "61",
+      "$id": "65",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Pocket Computer",
       "Type": 6,
       "Price": 100
     },
     {
-      "$id": "62",
+      "$id": "66",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Interface Cables",
       "Type": 6,
       "Price": 25
     },
     {
-      "$id": "63",
+      "$id": "67",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Low Impedance Cables",
       "Type": 6,
       "Price": 60
     },
     {
-      "$id": "64",
+      "$id": "68",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Trode Set",
       "Type": 6,
       "Price": 20
     },
     {
-      "$id": "65",
+      "$id": "69",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Keyboard (Computer)",
       "Type": 6,
       "Price": 100
     },
     {
-      "$id": "66",
+      "$id": "70",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Terminal (Full PC)",
       "Type": 6,
       "Price": 400
     },
     {
-      "$id": "67",
+      "$id": "71",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Mastoid Communicator",
       "Type": 7,
       "Price": 100
     },
     {
-      "$id": "68",
+      "$id": "72",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Pocket Communicator",
       "Type": 7,
       "Price": 50
     },
     {
-      "$id": "69",
+      "$id": "73",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cellphone",
       "Type": 7,
       "Price": 400
     },
     {
-      "$id": "70",
+      "$id": "74",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Mini Cellphone",
       "Type": 7,
       "Price": 800
     },
     {
-      "$id": "71",
+      "$id": "75",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Binoglasses",
       "Type": 8,
       "Price": 200
     },
     {
-      "$id": "72",
+      "$id": "76",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Binoculars",
       "Type": 8,
       "Price": 20
     },
     {
-      "$id": "73",
+      "$id": "77",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Light Booster Googles",
       "Type": 8,
       "Price": 200
     },
     {
-      "$id": "74",
+      "$id": "78",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "IR Googles",
       "Type": 8,
       "Price": 250
     },
     {
-      "$id": "75",
+      "$id": "79",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "IR Flash",
       "Type": 8,
       "Price": 50
     },
     {
-      "$id": "76",
+      "$id": "80",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Movie",
       "Type": 9,
       "Price": 10
     },
     {
-      "$id": "77",
+      "$id": "81",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Chip Rental",
       "Type": 9,
       "Price": 4
     },
     {
-      "$id": "78",
+      "$id": "82",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Braindance",
       "Type": 9,
       "Price": 20
     },
     {
-      "$id": "79",
+      "$id": "83",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Live/Sports Event",
       "Type": 9,
       "Price": 50
     },
     {
-      "$id": "80",
+      "$id": "84",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Fast Food",
       "Type": 9,
       "Price": 5
     },
     {
-      "$id": "81",
+      "$id": "85",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Keylock, per Level",
       "Type": 10,
       "Price": 20
     },
     {
-      "$id": "82",
+      "$id": "86",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cardlock, per level",
       "Type": 10,
       "Price": 100
     },
     {
-      "$id": "83",
+      "$id": "87",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Vocolock, per level",
       "Type": 10,
       "Price": 200
     },
     {
-      "$id": "84",
+      "$id": "88",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Line Tap Bug",
       "Type": 10,
       "Price": 200
     },
     {
-      "$id": "85",
+      "$id": "89",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Code Decryptor",
       "Type": 10,
       "Price": 500
     },
     {
-      "$id": "86",
+      "$id": "90",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Voc Decryptor",
       "Type": 10,
       "Price": 1000
     },
     {
-      "$id": "87",
+      "$id": "91",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Security Scanner",
       "Type": 10,
       "Price": 1500
     },
     {
-      "$id": "88",
+      "$id": "92",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Poison Sniffer",
       "Type": 10,
       "Price": 1500
     },
     {
-      "$id": "89",
+      "$id": "93",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Jamming Transmitter",
       "Type": 10,
       "Price": 500
     },
     {
-      "$id": "90",
+      "$id": "94",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Scanner Plate",
       "Type": 10,
       "Price": 500
     },
     {
-      "$id": "91",
+      "$id": "95",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Movement Sensor",
       "Type": 10,
       "Price": 40
     },
     {
-      "$id": "92",
+      "$id": "96",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Passcard",
       "Type": 10,
       "Price": 10
     },
     {
-      "$id": "93",
+      "$id": "97",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Tracking Device",
       "Type": 10,
       "Price": 1000
     },
     {
-      "$id": "94",
+      "$id": "98",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Tracer Button",
       "Type": 10,
       "Price": 50
     },
     {
-      "$id": "95",
+      "$id": "99",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Remote Sensors",
       "Type": 10,
       "Price": 700
     },
     {
-      "$id": "96",
+      "$id": "100",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "PlasKuffs",
       "Type": 10,
       "Price": 100
     },
     {
-      "$id": "97",
+      "$id": "101",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Stripwire Binders",
       "Type": 10,
       "Price": 5
     },
     {
-      "$id": "98",
+      "$id": "102",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Dermal Stapler",
       "Type": 11,
       "Price": 1000
     },
     {
-      "$id": "99",
+      "$id": "103",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Spray Skin, per can",
       "Type": 11,
       "Price": 50
     },
     {
-      "$id": "100",
+      "$id": "104",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cryotank",
       "Type": 11,
       "Price": 100000
     },
     {
-      "$id": "101",
+      "$id": "105",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Medikit",
       "Type": 11,
       "Price": 50
     },
     {
-      "$id": "102",
+      "$id": "106",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Surgical Kit",
       "Type": 11,
       "Price": 400
     },
     {
-      "$id": "103",
+      "$id": "107",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "First Aid Kit",
       "Type": 11,
       "Price": 10
     },
     {
-      "$id": "104",
+      "$id": "108",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Medscanner",
       "Type": 11,
       "Price": 300
     },
     {
-      "$id": "105",
+      "$id": "109",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Drug Analyser",
       "Type": 11,
       "Price": 75
     },
     {
-      "$id": "106",
+      "$id": "110",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Airhypo",
       "Type": 11,
       "Price": 100
     },
     {
-      "$id": "107",
+      "$id": "111",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Nylon Carrybag",
       "Type": 12,
       "Price": 5
     },
     {
-      "$id": "108",
+      "$id": "112",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Sleeping Bag",
       "Type": 12,
       "Price": 25
     },
     {
-      "$id": "109",
+      "$id": "113",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Inflatable Bed",
       "Type": 12,
       "Price": 25
     },
     {
-      "$id": "110",
+      "$id": "114",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Futon",
       "Type": 12,
       "Price": 90
     },
     {
-      "$id": "111",
+      "$id": "115",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Real Wood Furniture, per piece",
       "Type": 12,
       "Price": 200
     },
     {
-      "$id": "112",
+      "$id": "116",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Synthetic Furniture, per piece",
       "Type": 12,
       "Price": 100
     },
     {
-      "$id": "113",
+      "$id": "117",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Apartment Cube",
       "Type": 12,
       "Price": 5000
     },
     {
-      "$id": "114",
+      "$id": "118",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Lamp",
       "Type": 12,
       "Price": 20
     },
     {
-      "$id": "115",
+      "$id": "119",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cleaning Bot",
       "Type": 12,
       "Price": 1000
     },
     {
-      "$id": "116",
+      "$id": "120",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Vocal Switcher System",
       "Type": 12,
       "Price": 100
     },
     {
-      "$id": "117",
+      "$id": "121",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Scooter, Generic",
       "Type": 13,
       "Price": 500
     },
     {
-      "$id": "118",
+      "$id": "122",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Scooter, Generic, CC",
       "Type": 13,
       "Price": 1000
     },
     {
-      "$id": "119",
+      "$id": "123",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Motorcycle, Generic",
       "Type": 13,
       "Price": 1500
     },
     {
-      "$id": "120",
+      "$id": "124",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Motorcycle, Generic, CC",
       "Type": 13,
       "Price": 3000
     },
     {
-      "$id": "121",
+      "$id": "125",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "KeiCar, Generic",
       "Type": 13,
       "Price": 2000
     },
     {
-      "$id": "122",
+      "$id": "126",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "KeiCar, Generic, CC",
       "Type": 13,
       "Price": 4000
     },
     {
-      "$id": "123",
+      "$id": "127",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Small Compact, Generic",
       "Type": 13,
       "Price": 6000
     },
     {
-      "$id": "124",
+      "$id": "128",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Small Compact, Generic, CC",
       "Type": 13,
       "Price": 12000
     },
     {
-      "$id": "125",
+      "$id": "129",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Sedan, Generic",
       "Type": 13,
       "Price": 10000
     },
     {
-      "$id": "126",
+      "$id": "130",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Sedan, Generic, CC",
       "Type": 13,
       "Price": 20000
     },
     {
-      "$id": "127",
+      "$id": "131",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Sports Car, Generic",
       "Type": 13,
       "Price": 20000
     },
     {
-      "$id": "128",
+      "$id": "132",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Sports Car, Generic, CC",
       "Type": 13,
       "Price": 40000
     },
     {
-      "$id": "129",
+      "$id": "133",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Luxury Sedan, Generic",
       "Type": 13,
       "Price": 40000
     },
     {
-      "$id": "130",
+      "$id": "134",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Luxury Sedan, Generic, CC",
       "Type": 13,
       "Price": 80000
     },
     {
-      "$id": "131",
+      "$id": "135",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cellphone Service, Month",
       "Type": 14,
       "Price": 100
     },
     {
-      "$id": "132",
+      "$id": "136",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Standard Phone Service, Month",
       "Type": 14,
       "Price": 30
     },
     {
-      "$id": "133",
+      "$id": "137",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "CredChip Account, Month",
       "Type": 14,
       "Price": 20
     },
     {
-      "$id": "134",
+      "$id": "138",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Health Plan, Month",
       "Type": 14,
       "Price": 1000
     },
     {
-      "$id": "135",
+      "$id": "139",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Trauma Team Acct, Month",
       "Type": 14,
       "Price": 500
     },
     {
-      "$id": "136",
+      "$id": "140",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Cable TV",
       "Type": 14,
       "Price": 40
     },
     {
-      "$id": "137",
+      "$id": "141",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Kibble, per Week",
       "Type": 15,
       "Price": 50
     },
     {
-      "$id": "138",
+      "$id": "142",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Basic Prepak, per Week",
       "Type": 15,
       "Price": 150
     },
     {
-      "$id": "139",
+      "$id": "143",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Good Prepak, per Week",
       "Type": 15,
       "Price": 200
     },
     {
-      "$id": "140",
+      "$id": "144",
       "$type": "CP2020.Item, CP2020Chargen",
       "Name": "Fresh Food, per Week",
       "Type": 15,

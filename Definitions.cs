@@ -957,6 +957,39 @@ namespace CP2020
           //      t.humanity += humanity;
           //  }
             HumanityLoss += humanity;
+            if(w.ModStat != eStats.None)
+            {
+                switch (w.ModStat)
+                {
+                    case eStats.Int:
+                        Stats.Int.Value += w.ModValue;
+                        break;
+                    case eStats.Ref:
+                        Stats.Ref.Modifier -= w.ModValue;
+                        break;
+                    case eStats.Tech:
+                        Stats.Tech.Value += w.ModValue;
+                        break;
+                    case eStats.Cool:
+                        Stats.Cool.Value += w.ModValue;
+                        break;
+                    case eStats.Attr:
+                        Stats.Attr.Value += w.ModValue;
+                        break;
+                    case eStats.Luck:
+                        Stats.Luck.Value += w.ModValue;
+                        break;
+                    case eStats.MA:
+                        Stats.MA.Value += w.ModValue;
+                        break;
+                    case eStats.Body:
+                        Stats.Body.Value += w.ModValue;
+                        break;
+                    case eStats.Emp:
+                        Stats.Emp.Modifier-= w.ModValue;
+                        break;
+                }
+            }
             UpdateHumanity();
         }
         public void UpdateHumanity()
